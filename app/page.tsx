@@ -1,65 +1,155 @@
-import Image from "next/image";
+import type { Metadata } from 'next'
+import SGOClient from './SGOClient'
 
-export default function Home() {
+export const metadata: Metadata = {
+  title: 'SGO — Libro de Obras Digital Chile | Software Gestión Obras Públicas',
+  description: 'SGO es el software líder en Chile para gestión de obras de construcción y obras públicas. Libro de Obras Digital, Libro de Comunicaciones Electrónico y Gestor Documental. +700 obras conectadas.',
+  alternates: { canonical: 'https://sgo-landing.vercel.app' },
+  openGraph: {
+    title: 'SGO — Libro de Obras Digital Chile',
+    description: 'Software de gestión para construcción y obras públicas. Libro de Obras Digital obligatorio MOP. +700 obras conectadas.',
+    url: 'https://sgo-landing.vercel.app',
+    siteName: 'SGO',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'SGO — Libro de Obras Digital Chile | Software Gestión Obras Públicas',
+    description: 'Software líder en Chile para gestión de obras. Libro de Obras Digital obligatorio MOP. +700 obras conectadas.',
+  },
+}
+
+export default function SGOPage() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
-  );
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'WebPage',
+            name: 'SGO — Libro de Obras Digital Chile',
+            description: 'SGO es el software líder en Chile para gestión de obras de construcción y obras públicas. Libro de Obras Digital, Libro de Comunicaciones Electrónico y Gestor Documental.',
+            url: 'https://sgo-landing.vercel.app',
+            isPartOf: { '@type': 'WebSite', name: 'Muller y Pérez', url: 'https://www.mulleryperez.cl' },
+            breadcrumb: {
+              '@type': 'BreadcrumbList',
+              itemListElement: [
+                { '@type': 'ListItem', position: 1, name: 'Inicio', item: 'https://www.mulleryperez.cl' },
+                { '@type': 'ListItem', position: 2, name: 'SGO — Libro de Obras Digital', item: 'https://sgo-landing.vercel.app' },
+              ],
+            },
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'SoftwareApplication',
+            name: 'SGO — Sistema de Gestión de Obras',
+            applicationCategory: 'BusinessApplication',
+            operatingSystem: 'Web',
+            description: 'Software de gestión integral para obras de construcción y obras públicas en Chile. Incluye Libro de Obras Digital (LOD), Libro de Comunicaciones Electrónico (LCE), Libro de Consultoría Digital y Gestor Documental.',
+            url: 'https://beta.sgo.cl',
+            offers: {
+              '@type': 'Offer',
+              price: '0',
+              priceCurrency: 'CLP',
+              description: 'Contactar para cotización personalizada',
+            },
+            provider: {
+              '@type': 'Organization',
+              name: 'SGO',
+              url: 'https://beta.sgo.cl',
+              address: {
+                '@type': 'PostalAddress',
+                streetAddress: 'Sucre 2680',
+                addressLocality: 'Ñuñoa',
+                addressRegion: 'Santiago',
+                addressCountry: 'CL',
+              },
+              telephone: '+56 2 268 48 887',
+              email: 'contacto@sgo.cl',
+            },
+            knowsAbout: [
+              'Libro de Obras Digital Chile',
+              'Software gestión obras públicas',
+              'Libro de Comunicaciones Electrónico',
+              'Gestión documental construcción',
+              'Ministerio de Obras Públicas Chile',
+              'Inspección fiscal obras',
+              'Trazabilidad obras construcción',
+              'Consultoría digital obras',
+              'Normativa MOP Chile',
+              'Gestión de obras civiles',
+              'Control de obras públicas',
+              'Digitalización construcción Chile',
+            ],
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: [
+              {
+                '@type': 'Question',
+                name: '¿Qué es el Libro de Obras Digital (LOD)?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'El Libro de Obras Digital (LOD) es la versión electrónica del libro de obras exigido por el Ministerio de Obras Públicas de Chile. Permite registrar en tiempo real todas las anotaciones, observaciones e instrucciones de una obra de construcción, con trazabilidad completa y validez legal.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: '¿Es obligatorio usar un Libro de Obras Digital en Chile?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Sí. El Ministerio de Obras Públicas (MOP) de Chile exige el uso del Libro de Obras Digital para las empresas constructoras que ejecutan obras públicas. SGO cumple con todos los requisitos normativos establecidos por el MOP.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: '¿Qué productos incluye la plataforma SGO?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'SGO incluye cuatro productos principales: Libro de Obras Digital (LOD) para registro y trazabilidad de obras, Libro de Comunicaciones Electrónico (LCE) para comunicaciones formales entre actores, Libro de Consultoría Digital para gestión de consultorías, y Gestor Documental para administración centralizada de documentos de obra.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: '¿Cuántas obras están conectadas a SGO?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'SGO tiene más de 700 obras conectadas en todo Chile, siendo utilizado por empresas constructoras, consultoras y equipos de inspección fiscal en proyectos de obras públicas.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: '¿Quiénes pueden usar SGO?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'SGO está diseñado para tres perfiles principales: empresas constructoras que ejecutan obras públicas y privadas, consultoras que supervisan y asesoran proyectos de construcción, e inspectores fiscales del MOP que requieren trazabilidad y control documental.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: '¿Cómo puedo contactar a SGO para una demostración?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Puedes contactar a SGO llamando al +56 2 268 48 887, enviando un correo a contacto@sgo.cl, o visitando sus oficinas en Sucre 2680, Ñuñoa, Santiago. Para soporte técnico, el número es +56 2 292 98 180 o soporte@sgo.cl.',
+                },
+              },
+            ],
+          }),
+        }}
+      />
+      <SGOClient />
+    </>
+  )
 }
