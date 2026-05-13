@@ -50,7 +50,7 @@ export default function BlogPreview() {
     <section id="blog" ref={ref} className="py-16 md:py-20 bg-navy relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
-          <span className="text-amber text-sm font-semibold uppercase tracking-wider">
+          <span className="text-blue-400 text-sm font-semibold uppercase tracking-wider">
             Recursos
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mt-3 mb-5">
@@ -78,18 +78,18 @@ export default function BlogPreview() {
                   style={{ backgroundImage: `url('${a.image}')` }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-navy/90 to-transparent" />
-                <span className="absolute top-4 left-4 bg-amber/20 text-amber text-xs font-semibold px-3 py-1 rounded-full border border-amber/20">
+                <span className="absolute top-4 left-4 bg-blue-500/20 text-blue-400 text-xs font-semibold px-3 py-1 rounded-full border border-blue-500/20">
                   {a.category}
                 </span>
               </div>
 
               {/* Content */}
               <div className="p-6">
-                <h3 className="text-lg font-bold mb-3 text-off-white group-hover:text-amber transition-colors leading-snug">
+                <h3 className="text-lg font-bold mb-3 text-off-white group-hover:text-blue-300 transition-colors leading-snug">
                   {a.title}
                 </h3>
                 <p className="text-slate text-sm leading-relaxed mb-4">{a.excerpt}</p>
-                <span className="text-amber text-sm font-medium inline-flex items-center gap-1 group-hover:gap-2 transition-all">
+                <span className="text-blue-400 text-sm font-medium inline-flex items-center gap-1 group-hover:gap-2 transition-all">
                   Leer mas
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path
@@ -108,7 +108,7 @@ export default function BlogPreview() {
         <div className="text-center mt-12">
           <a
             href="/blog"
-            className="inline-flex items-center gap-2 border border-amber/30 hover:border-amber/60 text-amber font-medium text-sm px-6 py-3 rounded-full transition-all hover:bg-amber/5"
+            className="inline-flex items-center gap-2 border border-blue-500/30 hover:border-blue-500/60 text-blue-400 font-medium text-sm px-6 py-3 rounded-full transition-all hover:bg-blue-500/5"
           >
             Ver todos los articulos
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

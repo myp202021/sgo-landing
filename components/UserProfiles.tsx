@@ -27,9 +27,9 @@ const profiles = [
 ];
 
 const colorClasses: Record<string, { bg: string; text: string; border: string; dot: string }> = {
-  amber: { bg: "bg-amber/10", text: "text-amber", border: "border-amber/20", dot: "bg-amber" },
+  amber: { bg: "bg-blue-500/10", text: "text-blue-400", border: "border-blue-500/20", dot: "bg-blue-500" },
   "cyan-blue": { bg: "bg-cyan-blue/10", text: "text-cyan-blue", border: "border-cyan-blue/20", dot: "bg-cyan-blue" },
-  "amber-light": { bg: "bg-amber-light/10", text: "text-amber-light", border: "border-amber-light/20", dot: "bg-amber-light" },
+  "amber-light": { bg: "bg-blue-500-light/10", text: "text-blue-400-light", border: "border-blue-500-light/20", dot: "bg-blue-500-light" },
 };
 
 export default function UserProfiles() {
@@ -57,7 +57,7 @@ export default function UserProfiles() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
-          <span className="text-amber text-sm font-semibold uppercase tracking-wider">
+          <span className="text-blue-400 text-sm font-semibold uppercase tracking-wider">
             Perfiles
           </span>
           <h2 className="text-3xl md:text-4xl font-bold mt-3 mb-4">

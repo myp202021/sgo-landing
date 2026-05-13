@@ -35,9 +35,9 @@ const products = [
 
 const colorMap: Record<string, { bg: string; text: string; border: string; glow: string }> = {
   amber: {
-    bg: "bg-amber/10",
-    text: "text-amber",
-    border: "border-amber/20",
+    bg: "bg-blue-500/10",
+    text: "text-blue-400",
+    border: "border-blue-500/20",
     glow: "rgba(249, 115, 22, 0.04)",
   },
   "cyan-blue": {
@@ -47,9 +47,9 @@ const colorMap: Record<string, { bg: string; text: string; border: string; glow:
     glow: "rgba(56, 189, 248, 0.04)",
   },
   "amber-light": {
-    bg: "bg-amber-light/10",
-    text: "text-amber-light",
-    border: "border-amber-light/20",
+    bg: "bg-blue-500-light/10",
+    text: "text-blue-400-light",
+    border: "border-blue-500-light/20",
     glow: "rgba(251, 191, 36, 0.04)",
   },
 };
@@ -74,12 +74,12 @@ export default function Products() {
   return (
     <section id="productos" ref={ref} className="py-16 md:py-20 bg-navy-light relative overflow-hidden">
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-amber/3 rounded-full blur-[120px]" />
+        <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-blue-500/3 rounded-full blur-[120px]" />
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
-          <span className="text-amber text-sm font-semibold uppercase tracking-wider">
+          <span className="text-blue-400 text-sm font-semibold uppercase tracking-wider">
             Plataforma
           </span>
           <h2 className="text-3xl md:text-4xl font-bold mt-3 mb-4">

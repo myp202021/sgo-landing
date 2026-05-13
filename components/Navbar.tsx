@@ -40,7 +40,7 @@ export default function Navbar() {
               className="rounded-lg brightness-0 invert"
             />
             <span className="text-xl font-bold tracking-wide text-white">
-              SGO<span className="text-amber">.CL</span>
+              SGO<span className="text-blue-400">.CL</span>
             </span>
           </a>
 
@@ -50,7 +50,7 @@ export default function Navbar() {
               <a
                 key={l.href}
                 href={l.href}
-                className="text-slate hover:text-amber text-sm font-medium transition-colors"
+                className="text-slate hover:text-blue-300 text-sm font-medium transition-colors"
               >
                 {l.label}
               </a>
@@ -89,7 +89,7 @@ export default function Navbar() {
                 key={l.href}
                 href={l.href}
                 onClick={() => setOpen(false)}
-                className="block text-slate hover:text-amber text-sm font-medium py-2 transition-colors"
+                className="block text-slate hover:text-blue-300 text-sm font-medium py-2 transition-colors"
               >
                 {l.label}
               </a>

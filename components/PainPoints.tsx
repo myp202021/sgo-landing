@@ -55,9 +55,9 @@ function PainCard({ icon, text, delay }: { icon: string; text: string; delay: nu
       style={{ transitionDelay: `${delay}ms` }}
     >
       <div className="flex gap-4">
-        <div className="flex-shrink-0 w-10 h-10 rounded-xl bg-amber/10 flex items-center justify-center">
+        <div className="flex-shrink-0 w-10 h-10 rounded-xl bg-blue-500/10 flex items-center justify-center">
           <svg
-            className="w-5 h-5 text-amber"
+            className="w-5 h-5 text-blue-400"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -76,14 +76,14 @@ export default function PainPoints() {
   return (
     <section className="py-16 md:py-20 bg-navy relative overflow-hidden">
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-amber/3 rounded-full blur-[120px]" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-blue-500/3 rounded-full blur-[120px]" />
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-5">
             Los problemas que conoces{" "}
-            <span className="text-amber">si trabajas en obras</span>
+            <span className="text-blue-400">si trabajas en obras</span>
           </h2>
         </div>
 

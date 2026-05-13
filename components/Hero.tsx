@@ -47,7 +47,7 @@ function AnimatedNumber({
   }, [started, target]);
 
   return (
-    <span ref={ref} className="text-4xl md:text-5xl font-bold text-amber tabular-nums">
+    <span ref={ref} className="text-4xl md:text-5xl font-bold text-blue-400 tabular-nums">
       {prefix}
       {count.toLocaleString()}
       {suffix}
@@ -77,7 +77,7 @@ export default function Hero() {
       {/* Photo background with overlay */}
       <div className="absolute inset-0 pointer-events-none">
         <div
-          className="absolute inset-0 bg-cover bg-center opacity-8"
+          className="absolute inset-0 bg-cover bg-center opacity-20"
           style={{
             backgroundImage:
               "url('/images/magnific__create-a-composition-with-a-construction-worker-lo__8675.png')",
@@ -87,7 +87,7 @@ export default function Hero() {
       </div>
 
       {/* Floating accent orbs */}
-      <div className="absolute top-1/4 right-1/4 w-80 h-80 bg-amber/5 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-1/4 right-1/4 w-80 h-80 bg-blue-500/5 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-1/3 left-1/6 w-60 h-60 bg-cyan-blue/5 rounded-full blur-2xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-28 md:py-36 relative z-10 w-full">
@@ -97,15 +97,15 @@ export default function Hero() {
           }`}
         >
           {/* Badge */}
-          <div className="inline-flex items-center gap-2.5 bg-amber/8 border border-amber/20 rounded-full px-5 py-2 mb-10">
-            <svg className="w-4 h-4 text-amber" fill="currentColor" viewBox="0 0 20 20">
+          <div className="inline-flex items-center gap-2.5 bg-blue-500/8 border border-blue-500/20 rounded-full px-5 py-2 mb-10">
+            <svg className="w-4 h-4 text-blue-400" fill="currentColor" viewBox="0 0 20 20">
               <path
                 fillRule="evenodd"
                 d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
                 clipRule="evenodd"
               />
             </svg>
-            <span className="text-amber text-sm font-medium tracking-wide">
+            <span className="text-blue-400 text-sm font-medium tracking-wide">
               +700 obras conectadas en Chile
             </span>
           </div>
@@ -113,7 +113,7 @@ export default function Hero() {
           {/* H1 */}
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] mb-7 tracking-tight">
             El Libro de Obras Digital que el MOP exige.{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber to-amber-light">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-blue-500-light">
               Y que tu equipo necesita.
             </span>
           </h1>
@@ -136,7 +136,7 @@ export default function Hero() {
             </a>
             <a
               href="#productos"
-              className="w-full sm:w-auto border border-white/20 hover:border-amber/40 text-white font-medium text-lg px-10 py-4 rounded-full transition-all hover:bg-white/5"
+              className="w-full sm:w-auto border border-white/20 hover:border-blue-500/40 text-white font-medium text-lg px-10 py-4 rounded-full transition-all hover:bg-white/5"
             >
               Ver Productos
             </a>

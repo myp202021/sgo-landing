@@ -55,12 +55,12 @@ export default function Testimonials() {
   return (
     <section ref={ref} className="py-16 md:py-20 bg-navy-light relative overflow-hidden">
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-amber/3 rounded-full blur-[120px]" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-blue-500/3 rounded-full blur-[120px]" />
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-14">
-          <span className="text-amber text-sm font-semibold uppercase tracking-wider">
+          <span className="text-blue-400 text-sm font-semibold uppercase tracking-wider">
             Testimonios
           </span>
           <h2 className="text-3xl md:text-4xl font-bold mt-3 mb-4">
@@ -81,7 +81,7 @@ export default function Testimonials() {
               style={{ transitionDelay: `${i * 200}ms` }}
             >
               {/* Quote mark */}
-              <div className="absolute top-6 right-8 text-amber/10 text-7xl font-bold leading-none select-none">
+              <div className="absolute top-6 right-8 text-blue-400/10 text-7xl font-bold leading-none select-none">
                 &ldquo;
               </div>
 
@@ -90,12 +90,12 @@ export default function Testimonials() {
               </p>
 
               <div className="flex items-center gap-4 border-t border-white/5 pt-5">
-                <div className="w-11 h-11 bg-amber/15 rounded-full flex items-center justify-center text-amber font-bold text-sm">
+                <div className="w-11 h-11 bg-blue-500/15 rounded-full flex items-center justify-center text-blue-400 font-bold text-sm">
                   {t.initials}
                 </div>
                 <div>
                   <div className="font-bold text-off-white text-sm">{t.name}</div>
-                  <div className="text-amber text-xs">{t.company}</div>
+                  <div className="text-blue-400 text-xs">{t.company}</div>
                 </div>
               </div>
             </div>

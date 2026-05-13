@@ -35,12 +35,12 @@ export default function FAQ() {
   return (
     <section id="faq" className="py-16 md:py-20 bg-navy-light relative overflow-hidden">
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-amber/3 rounded-full blur-[120px]" />
+        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-blue-500/3 rounded-full blur-[120px]" />
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-14">
-          <span className="text-amber text-sm font-semibold uppercase tracking-wider">
+          <span className="text-blue-400 text-sm font-semibold uppercase tracking-wider">
             FAQ
           </span>
           <h2 className="text-3xl md:text-4xl font-bold mt-3 mb-4">
@@ -61,13 +61,13 @@ export default function FAQ() {
               >
                 <button
                   onClick={() => setOpenIndex(isOpen ? null : i)}
-                  className="w-full flex items-center justify-between px-6 py-5 text-left hover:bg-amber/3 transition-colors"
+                  className="w-full flex items-center justify-between px-6 py-5 text-left hover:bg-blue-500/3 transition-colors"
                 >
                   <span className="text-[15px] font-bold text-off-white pr-4">
                     {f.q}
                   </span>
                   <svg
-                    className={`w-5 h-5 text-amber flex-shrink-0 transition-transform duration-300 ${
+                    className={`w-5 h-5 text-blue-400 flex-shrink-0 transition-transform duration-300 ${
                       isOpen ? "rotate-45" : ""
                     }`}
                     fill="none"

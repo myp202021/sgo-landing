@@ -38,7 +38,7 @@ export default function FinalCTA() {
       </div>
 
       {/* Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-amber/5 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-blue-500/5 rounded-full blur-[120px] pointer-events-none" />
 
       <div
         className={`max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center transition-all duration-1000 ${
@@ -47,7 +47,7 @@ export default function FinalCTA() {
       >
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
           Digitaliza tu{" "}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber to-amber-light">
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-blue-500-light">
             proxima obra
           </span>
         </h2>
@@ -67,7 +67,7 @@ export default function FinalCTA() {
           </a>
           <a
             href="tel:+56226848887"
-            className="w-full sm:w-auto border border-white/20 hover:border-amber/40 text-white font-medium text-lg px-10 py-4 rounded-full transition-all hover:bg-white/5"
+            className="w-full sm:w-auto border border-white/20 hover:border-blue-500/40 text-white font-medium text-lg px-10 py-4 rounded-full transition-all hover:bg-white/5"
           >
             Llamar al +56 2 268 48 887
           </a>
@@ -90,7 +90,7 @@ export default function FinalCTA() {
             <div className="text-slate/50 uppercase text-xs tracking-wider mb-1 font-semibold">
               Correo
             </div>
-            <a href="mailto:contacto@sgo.cl" className="text-amber hover:text-amber-light transition-colors">
+            <a href="mailto:contacto@sgo.cl" className="text-blue-400 hover:text-blue-300-light transition-colors">
               contacto@sgo.cl
             </a>
           </div>

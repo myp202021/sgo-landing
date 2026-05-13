@@ -5,7 +5,7 @@
   --color-navy-light: #2a3158;
   --color-navy-lighter: #3d4a7a;
   --color-steel: #64748b;
-  --color-amber: #F97316;
+  --color-accent: #3b82f6;
   --color-amber-light: #FBBF24;
   --color-cyan-blue: #38bdf8;
   --color-slate: #8892A4;
@@ -97,7 +97,7 @@ body {
 
 /* CTA glow button */
 .cta-glow {
-  background: linear-gradient(135deg, #F97316 0%, #FBBF24 100%);
+  background: linear-gradient(135deg, #3b82f6 0%, #FBBF24 100%);
   box-shadow: 0 4px 20px rgba(249, 115, 22, 0.3);
   transition: all 0.3s ease;
 }

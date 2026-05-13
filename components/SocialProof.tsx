@@ -51,7 +51,7 @@ export default function SocialProof() {
     <section ref={ref} className="py-16 md:py-20 bg-navy relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-14">
-          <span className="text-amber text-sm font-semibold uppercase tracking-wider">
+          <span className="text-blue-400 text-sm font-semibold uppercase tracking-wider">
             Confianza
           </span>
           <h2 className="text-3xl md:text-4xl font-bold mt-3">
@@ -68,9 +68,9 @@ export default function SocialProof() {
               }`}
               style={{ transitionDelay: `${i * 100}ms` }}
             >
-              <div className="w-10 h-10 bg-amber/10 rounded-xl flex items-center justify-center mx-auto mb-3">
+              <div className="w-10 h-10 bg-blue-500/10 rounded-xl flex items-center justify-center mx-auto mb-3">
                 <svg
-                  className="w-5 h-5 text-amber"
+                  className="w-5 h-5 text-blue-400"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -79,7 +79,7 @@ export default function SocialProof() {
                   <path strokeLinecap="round" strokeLinejoin="round" d={p.icon} />
                 </svg>
               </div>
-              <div className="text-2xl font-bold text-amber mb-1">{p.value}</div>
+              <div className="text-2xl font-bold text-blue-400 mb-1">{p.value}</div>
               <p className="text-slate text-xs">{p.label}</p>
             </div>
           ))}
