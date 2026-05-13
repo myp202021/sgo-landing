@@ -14,13 +14,13 @@ export default function Footer() {
               height={28}
               className="rounded brightness-0 invert"
             />
-            <span className="font-bold text-white/60 text-sm">
+            <span className="font-bold text-white/80 text-sm">
               SGO — Sistema de Gestion de Obras
             </span>
           </div>
 
           {/* Links */}
-          <div className="flex flex-wrap items-center gap-6 text-xs text-white/30">
+          <div className="flex flex-wrap items-center gap-6 text-xs text-white/50">
             <span>Sucre 2680, Nunoa, Santiago</span>
             <a href="mailto:contacto@sgo.cl" className="hover:text-blue-300 transition-colors">
               contacto@sgo.cl
@@ -39,11 +39,11 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="text-center mt-8 text-[11px] text-white/15">
+        <div className="text-center mt-8 text-[11px] text-white/30">
           Desarrollado por{" "}
           <a
             href="https://www.mulleryperez.cl"
-            className="text-white/25 hover:text-blue-300/40 transition-colors"
+            className="text-white/40 hover:text-blue-300/40 transition-colors"
           >
             Muller y Perez
           </a>

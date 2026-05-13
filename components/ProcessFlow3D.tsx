@@ -99,7 +99,7 @@ export default function ProcessFlow3D() {
 
                 {/* Label below node */}
                 <div className={`absolute top-full mt-2 left-1/2 -translate-x-1/2 whitespace-nowrap text-xs font-medium transition-all duration-300 ${
-                  i === activeStep ? 'text-blue-400 opacity-100' : 'text-slate/50 opacity-70'
+                  i === activeStep ? 'text-blue-400 opacity-100' : 'text-white/60 opacity-100'
                 }`}>
                   {step.title}
                 </div>
@@ -164,7 +164,7 @@ export default function ProcessFlow3D() {
           </div>
         </div>
 
-        <p className="text-center text-slate/50 text-xs mt-6">
+        <p className="text-center text-white/40 text-xs mt-6">
           Haz clic en cada paso para ver el detalle
         </p>
       </div>

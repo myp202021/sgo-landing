@@ -47,11 +47,11 @@ export default function FinalCTA() {
       >
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
           Digitaliza tu{" "}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-blue-500-light">
-            proxima obra
+          <span className="text-blue-400">
+            próxima obra
           </span>
         </h2>
-        <p className="text-slate text-lg max-w-xl mx-auto mb-10 leading-relaxed">
+        <p className="text-white/70 text-lg max-w-xl mx-auto mb-10 leading-relaxed">
           Mas de 700 obras ya confian en SGO. Solicita una demostracion y descubre como
           cumplir con la normativa MOP de forma simple y eficiente.
         </p>

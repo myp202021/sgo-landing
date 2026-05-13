@@ -77,13 +77,13 @@ export default function Hero() {
       {/* Photo background with overlay */}
       <div className="absolute inset-0 pointer-events-none">
         <div
-          className="absolute inset-0 bg-cover bg-center opacity-20"
+          className="absolute inset-0 bg-cover bg-center opacity-30"
           style={{
             backgroundImage:
               "url('/images/magnific__create-a-composition-with-a-construction-worker-lo__8675.png')",
           }}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0f1225]/95 via-navy/90 to-navy" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0f1225]/80 via-navy/70 to-navy/90" />
       </div>
 
       {/* Floating accent orbs */}
@@ -113,13 +113,13 @@ export default function Hero() {
           {/* H1 */}
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] mb-7 tracking-tight">
             El Libro de Obras Digital que el MOP exige.{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-blue-500-light">
+            <span className="text-blue-400">
               Y que tu equipo necesita.
             </span>
           </h1>
 
           {/* Subtitle */}
-          <p className="text-lg md:text-xl text-slate max-w-2xl mx-auto mb-12 leading-relaxed">
+          <p className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto mb-12 leading-relaxed">
             SGO digitaliza la comunicacion contractual entre constructoras, consultoras
             e inspeccion fiscal. Trazabilidad completa. Firma electronica. Cumplimiento normativo.
           </p>
