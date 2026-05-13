@@ -4,15 +4,33 @@ import { useEffect, useRef, useState } from "react";
 
 const testimonials = [
   {
+    name: "Bruno Gysling",
+    company: "MASERCO",
+    text: "La plataforma acompaña de cerca con un equipo humano super comprometido y diligente.",
+    initials: "BG",
+  },
+  {
+    name: "Marco Sáez",
+    company: "QUILÍN",
+    text: "Han considerado mis solicitudes y sugerencias en el desarrollo y mejora de la aplicación.",
+    initials: "MS",
+  },
+  {
     name: "Esteban Rocha",
     company: "Inversiones Petrohue",
-    text: "La plataforma y el equipo han contribuido a lograr los objetivos contractuales. SGO nos dio trazabilidad total y tranquilidad frente a cualquier auditoria del MOP.",
+    text: "Tanto la plataforma como el equipo de SGO.cl han contribuido en los últimos años a lograr los objetivos establecidos en nuestros contratos.",
     initials: "ER",
   },
   {
+    name: "Carlos Sanhueza",
+    company: "Constructora González García Ltda",
+    text: "Se hicieron responsables de la tramitación e instalación de mi Firma Electrónica Avanzada asegurándose de su correcto funcionamiento.",
+    initials: "CS",
+  },
+  {
     name: "Rigoberto Sierra",
-    company: "Dacamros",
-    text: "Han resuelto mis consultas incluso fuera del horario establecido. Desde que implementamos SGO, la comunicacion entre nuestros equipos en terreno y la inspeccion fiscal es mucho mas fluida.",
+    company: "DACAMROS",
+    text: "Me han ayudado a resolver mis dudas todas las veces que lo he necesitado, incluso fuera del horario establecido en las especificaciones.",
     initials: "RS",
   },
 ];
@@ -53,7 +71,7 @@ export default function Testimonials() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {testimonials.map((t, i) => (
             <div
               key={t.name}
