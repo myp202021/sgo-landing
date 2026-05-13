@@ -1,23 +1,15 @@
-import type { Metadata } from 'next'
-import SGOClient from './SGOClient'
-
-export const metadata: Metadata = {
-  title: 'SGO — Libro de Obras Digital Chile | Software Gestión Obras Públicas',
-  description: 'SGO es el software líder en Chile para gestión de obras de construcción y obras públicas. Libro de Obras Digital, Libro de Comunicaciones Electrónico y Gestor Documental. +700 obras conectadas.',
-  alternates: { canonical: 'https://sgo-landing.vercel.app' },
-  openGraph: {
-    title: 'SGO — Libro de Obras Digital Chile',
-    description: 'Software de gestión para construcción y obras públicas. Libro de Obras Digital obligatorio MOP. +700 obras conectadas.',
-    url: 'https://sgo-landing.vercel.app',
-    siteName: 'SGO',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'SGO — Libro de Obras Digital Chile | Software Gestión Obras Públicas',
-    description: 'Software líder en Chile para gestión de obras. Libro de Obras Digital obligatorio MOP. +700 obras conectadas.',
-  },
-}
+import Navbar from "../components/Navbar";
+import Hero from "../components/Hero";
+import PainPoints from "../components/PainPoints";
+import Products from "../components/Products";
+import ProcessFlow3D from "../components/ProcessFlow3D";
+import UserProfiles from "../components/UserProfiles";
+import SocialProof from "../components/SocialProof";
+import Testimonials from "../components/Testimonials";
+import BlogPreview from "../components/BlogPreview";
+import FAQ from "../components/FAQ";
+import FinalCTA from "../components/FinalCTA";
+import Footer from "../components/Footer";
 
 export default function SGOPage() {
   return (
@@ -26,66 +18,47 @@ export default function SGOPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'WebPage',
-            name: 'SGO — Libro de Obras Digital Chile',
-            description: 'SGO es el software líder en Chile para gestión de obras de construcción y obras públicas. Libro de Obras Digital, Libro de Comunicaciones Electrónico y Gestor Documental.',
-            url: 'https://sgo-landing.vercel.app',
-            isPartOf: { '@type': 'WebSite', name: 'Muller y Pérez', url: 'https://www.mulleryperez.cl' },
-            breadcrumb: {
-              '@type': 'BreadcrumbList',
-              itemListElement: [
-                { '@type': 'ListItem', position: 1, name: 'Inicio', item: 'https://www.mulleryperez.cl' },
-                { '@type': 'ListItem', position: 2, name: 'SGO — Libro de Obras Digital', item: 'https://sgo-landing.vercel.app' },
-              ],
-            },
-          }),
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'SoftwareApplication',
-            name: 'SGO — Sistema de Gestión de Obras',
-            applicationCategory: 'BusinessApplication',
-            operatingSystem: 'Web',
-            description: 'Software de gestión integral para obras de construcción y obras públicas en Chile. Incluye Libro de Obras Digital (LOD), Libro de Comunicaciones Electrónico (LCE), Libro de Consultoría Digital y Gestor Documental.',
-            url: 'https://beta.sgo.cl',
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            name: "SGO — Sistema de Gestion de Obras",
+            applicationCategory: "BusinessApplication",
+            operatingSystem: "Web",
+            description:
+              "Software de gestion integral para obras de construccion y obras publicas en Chile. Incluye Libro de Obras Digital (LOD), Libro de Comunicaciones Electronico (LCE), Libro de Consultoria Digital y Gestor Documental.",
+            url: "https://beta.sgo.cl",
             offers: {
-              '@type': 'Offer',
-              price: '0',
-              priceCurrency: 'CLP',
-              description: 'Contactar para cotización personalizada',
+              "@type": "Offer",
+              price: "0",
+              priceCurrency: "CLP",
+              description: "Contactar para cotizacion personalizada",
             },
             provider: {
-              '@type': 'Organization',
-              name: 'SGO',
-              url: 'https://beta.sgo.cl',
+              "@type": "Organization",
+              name: "SGO",
+              url: "https://beta.sgo.cl",
               address: {
-                '@type': 'PostalAddress',
-                streetAddress: 'Sucre 2680',
-                addressLocality: 'Ñuñoa',
-                addressRegion: 'Santiago',
-                addressCountry: 'CL',
+                "@type": "PostalAddress",
+                streetAddress: "Sucre 2680",
+                addressLocality: "Nunoa",
+                addressRegion: "Santiago",
+                addressCountry: "CL",
               },
-              telephone: '+56 2 268 48 887',
-              email: 'contacto@sgo.cl',
+              telephone: "+56 2 268 48 887",
+              email: "contacto@sgo.cl",
             },
             knowsAbout: [
-              'Libro de Obras Digital Chile',
-              'Software gestión obras públicas',
-              'Libro de Comunicaciones Electrónico',
-              'Gestión documental construcción',
-              'Ministerio de Obras Públicas Chile',
-              'Inspección fiscal obras',
-              'Trazabilidad obras construcción',
-              'Consultoría digital obras',
-              'Normativa MOP Chile',
-              'Gestión de obras civiles',
-              'Control de obras públicas',
-              'Digitalización construcción Chile',
+              "Libro de Obras Digital Chile",
+              "Software gestion obras publicas",
+              "Libro de Comunicaciones Electronico",
+              "Gestion documental construccion",
+              "Ministerio de Obras Publicas Chile",
+              "Inspeccion fiscal obras",
+              "Trazabilidad obras construccion",
+              "Consultoria digital obras",
+              "Normativa MOP Chile",
+              "Gestion de obras civiles",
+              "Control de obras publicas",
+              "Digitalizacion construccion Chile",
             ],
           }),
         }}
@@ -94,62 +67,101 @@ export default function SGOPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'FAQPage',
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
             mainEntity: [
               {
-                '@type': 'Question',
-                name: '¿Qué es el Libro de Obras Digital (LOD)?',
+                "@type": "Question",
+                name: "Es obligatorio el Libro de Obras Digital en Chile?",
                 acceptedAnswer: {
-                  '@type': 'Answer',
-                  text: 'El Libro de Obras Digital (LOD) es la versión electrónica del libro de obras exigido por el Ministerio de Obras Públicas de Chile. Permite registrar en tiempo real todas las anotaciones, observaciones e instrucciones de una obra de construcción, con trazabilidad completa y validez legal.',
+                  "@type": "Answer",
+                  text: "Si. El Ministerio de Obras Publicas (MOP) de Chile exige el uso del Libro de Obras Digital para las empresas constructoras que ejecutan obras publicas. SGO cumple con todos los requisitos normativos establecidos por el MOP.",
                 },
               },
               {
-                '@type': 'Question',
-                name: '¿Es obligatorio usar un Libro de Obras Digital en Chile?',
+                "@type": "Question",
+                name: "Que perfiles pueden usar SGO?",
                 acceptedAnswer: {
-                  '@type': 'Answer',
-                  text: 'Sí. El Ministerio de Obras Públicas (MOP) de Chile exige el uso del Libro de Obras Digital para las empresas constructoras que ejecutan obras públicas. SGO cumple con todos los requisitos normativos establecidos por el MOP.',
+                  "@type": "Answer",
+                  text: "SGO esta disenado para tres perfiles principales: empresas constructoras que ejecutan obras publicas y privadas, consultoras que supervisan y asesoran proyectos de construccion, e inspectores fiscales del MOP que requieren trazabilidad y control documental.",
                 },
               },
               {
-                '@type': 'Question',
-                name: '¿Qué productos incluye la plataforma SGO?',
+                "@type": "Question",
+                name: "SGO tiene firma electronica?",
                 acceptedAnswer: {
-                  '@type': 'Answer',
-                  text: 'SGO incluye cuatro productos principales: Libro de Obras Digital (LOD) para registro y trazabilidad de obras, Libro de Comunicaciones Electrónico (LCE) para comunicaciones formales entre actores, Libro de Consultoría Digital para gestión de consultorías, y Gestor Documental para administración centralizada de documentos de obra.',
+                  "@type": "Answer",
+                  text: "Si. SGO utiliza firma electronica avanzada que cumple con la Ley 19.799 de Chile. Cada anotacion, comunicacion y documento queda firmado digitalmente con validez legal.",
                 },
               },
               {
-                '@type': 'Question',
-                name: '¿Cuántas obras están conectadas a SGO?',
+                "@type": "Question",
+                name: "Se puede usar SGO desde terreno?",
                 acceptedAnswer: {
-                  '@type': 'Answer',
-                  text: 'SGO tiene más de 700 obras conectadas en todo Chile, siendo utilizado por empresas constructoras, consultoras y equipos de inspección fiscal en proyectos de obras públicas.',
+                  "@type": "Answer",
+                  text: "Si. SGO es una plataforma web responsive que funciona desde cualquier dispositivo con conexion a internet: computador, tablet o celular. Disponible 24/7.",
                 },
               },
               {
-                '@type': 'Question',
-                name: '¿Quiénes pueden usar SGO?',
+                "@type": "Question",
+                name: "Cuanto toma implementar SGO?",
                 acceptedAnswer: {
-                  '@type': 'Answer',
-                  text: 'SGO está diseñado para tres perfiles principales: empresas constructoras que ejecutan obras públicas y privadas, consultoras que supervisan y asesoran proyectos de construcción, e inspectores fiscales del MOP que requieren trazabilidad y control documental.',
+                  "@type": "Answer",
+                  text: "La implementacion es rapida. Se configura la obra, se asignan roles y cada usuario accede desde su navegador. En la mayoria de los casos la obra queda operativa en menos de una semana.",
                 },
               },
               {
-                '@type': 'Question',
-                name: '¿Cómo puedo contactar a SGO para una demostración?',
+                "@type": "Question",
+                name: "Como se garantiza la trazabilidad en SGO?",
                 acceptedAnswer: {
-                  '@type': 'Answer',
-                  text: 'Puedes contactar a SGO llamando al +56 2 268 48 887, enviando un correo a contacto@sgo.cl, o visitando sus oficinas en Sucre 2680, Ñuñoa, Santiago. Para soporte técnico, el número es +56 2 292 98 180 o soporte@sgo.cl.',
+                  "@type": "Answer",
+                  text: "Cada accion genera un registro inmutable con fecha, hora, autor y contenido. Las marcas de tiempo son inalterables y el sistema mantiene un historial completo de todas las modificaciones.",
                 },
               },
             ],
           }),
         }}
       />
-      <SGOClient />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            name: "SGO",
+            url: "https://beta.sgo.cl",
+            logo: "https://sgo-landing.vercel.app/images/sgo-logo-full.png",
+            contactPoint: {
+              "@type": "ContactPoint",
+              telephone: "+56-2-268-48-887",
+              contactType: "sales",
+              email: "contacto@sgo.cl",
+              areaServed: "CL",
+              availableLanguage: "Spanish",
+            },
+            address: {
+              "@type": "PostalAddress",
+              streetAddress: "Sucre 2680",
+              addressLocality: "Nunoa",
+              addressRegion: "Santiago",
+              addressCountry: "CL",
+            },
+          }),
+        }}
+      />
+
+      <Navbar />
+      <Hero />
+      <PainPoints />
+      <Products />
+      <ProcessFlow3D />
+      <UserProfiles />
+      <SocialProof />
+      <Testimonials />
+      <BlogPreview />
+      <FAQ />
+      <FinalCTA />
+      <Footer />
     </>
-  )
+  );
 }
