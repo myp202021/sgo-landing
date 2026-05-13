@@ -77,13 +77,14 @@ export default function Hero() {
       {/* Photo background with overlay */}
       <div className="absolute inset-0 pointer-events-none">
         <div
-          className="absolute inset-0 bg-cover bg-center opacity-30"
+          className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage:
               "url('/images/magnific__create-a-composition-with-a-construction-worker-lo__8675.png')",
+            opacity: 0.4,
           }}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0f1225]/80 via-navy/70 to-navy/90" />
+        <div className="absolute inset-0" style={{ background: 'linear-gradient(180deg, rgba(15,18,37,0.7) 0%, rgba(26,31,61,0.75) 50%, rgba(26,31,61,0.95) 100%)' }} />
       </div>
 
       {/* Floating accent orbs */}
