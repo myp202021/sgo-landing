@@ -75,7 +75,7 @@ export default function Testimonials() {
           <h2 className="text-3xl md:text-4xl font-bold mt-3 mb-4">
             Lo que dicen nuestros clientes
           </h2>
-          <p className="text-white/90 max-w-xl mx-auto">
+          <p className="text-white max-w-xl mx-auto">
             Empresas que ya digitalizaron la gestion de sus obras con SGO.
           </p>
         </div>

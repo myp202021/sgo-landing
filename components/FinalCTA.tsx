@@ -80,14 +80,14 @@ export default function FinalCTA() {
             <div className="text-white/30 uppercase text-xs tracking-wider mb-2 font-semibold">
               Oficina
             </div>
-            <div className="text-off-white/75 text-sm">Sucre 2680, Nunoa, Santiago</div>
+            <div className="text-white/90 text-sm">Sucre 2680, Nunoa, Santiago</div>
           </div>
           <div className="text-center">
             <div className="text-white/30 uppercase text-xs tracking-wider mb-2 font-semibold">
               Soporte tecnico
             </div>
-            <div className="text-off-white/75 text-sm">+56 2 292 98 180</div>
-            <div className="text-off-white/75 text-sm">soporte@sgo.cl</div>
+            <div className="text-white/90 text-sm">+56 2 292 98 180</div>
+            <div className="text-white/90 text-sm">soporte@sgo.cl</div>
           </div>
           <div className="text-center">
             <div className="text-white/30 uppercase text-xs tracking-wider mb-2 font-semibold">

@@ -78,7 +78,7 @@ export default function Products() {
           <h2 className="text-3xl md:text-4xl font-bold mt-3 mb-4">
             Una plataforma disenada para entregar control y respaldo legal
           </h2>
-          <p className="text-white/90 max-w-2xl mx-auto text-lg">
+          <p className="text-white max-w-2xl mx-auto text-lg">
             Toda la informacion centralizada, trazable y protegida en un unico ecosistema.
           </p>
         </div>
@@ -150,7 +150,7 @@ export default function Products() {
                   <span className="inline-block text-xs font-semibold text-teal/80 mt-0.5">{p.tag}</span>
                 </div>
               </div>
-              <p className="text-white/90 text-sm leading-relaxed">{p.desc}</p>
+              <p className="text-white text-sm leading-relaxed">{p.desc}</p>
             </div>
           ))}
         </div>

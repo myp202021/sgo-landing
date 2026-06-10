@@ -130,7 +130,7 @@ export default function Hero() {
                 "Trazabilidad completa",
                 "Respaldo juridico",
               ].map((item) => (
-                <div key={item} className="flex items-center gap-2 text-sm text-white/90">
+                <div key={item} className="flex items-center gap-2 text-sm text-white">
                   <svg className="w-4 h-4 text-teal flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path
                       fillRule="evenodd"
@@ -148,7 +148,7 @@ export default function Hero() {
               {stats.map((s) => (
                 <div key={s.label}>
                   <AnimatedNumber target={s.target} prefix={s.prefix} suffix={s.suffix} />
-                  <p className="text-steel text-xs font-medium mt-1 uppercase tracking-wider">
+                  <p className="text-white/70 text-xs font-medium mt-1 uppercase tracking-wider">
                     {s.label}
                   </p>
                 </div>
@@ -167,7 +167,7 @@ export default function Hero() {
               <div className="absolute -top-20 -right-20 w-40 h-40 bg-teal/8 rounded-full blur-3xl pointer-events-none" />
 
               <h2 className="text-xl font-bold text-white mb-1">Solicita una demo</h2>
-              <p className="text-sm text-white/80 mb-6">
+              <p className="text-sm text-white/90 mb-6">
                 Un especialista te contactara en menos de 24 horas.
               </p>
 

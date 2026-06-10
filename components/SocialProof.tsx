@@ -66,7 +66,7 @@ export default function SocialProof() {
                 </svg>
               </div>
               <div className="text-2xl md:text-3xl font-bold text-white mb-1">{s.value}</div>
-              <p className="text-steel text-xs font-medium">{s.label}</p>
+              <p className="text-white/80 text-xs font-medium">{s.label}</p>
             </div>
           ))}
         </div>

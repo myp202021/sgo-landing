@@ -94,13 +94,13 @@ export default function PainPoints() {
                   </div>
                   <div>
                     <h3 className="text-base font-bold text-off-white mb-1">{p.title}</h3>
-                    <p className="text-steel text-sm leading-relaxed">{p.desc}</p>
+                    <p className="text-white/80 text-sm leading-relaxed">{p.desc}</p>
                   </div>
                 </div>
               ))}
             </div>
 
-            <p className="text-white/90 text-base mt-8 leading-relaxed font-medium">
+            <p className="text-white text-base mt-8 leading-relaxed font-medium">
               Cada comunicacion mal gestionada puede transformarse en un riesgo para tu organizacion.
             </p>
           </div>

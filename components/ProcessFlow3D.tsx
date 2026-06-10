@@ -57,7 +57,7 @@ export default function Benefits() {
           <h2 className="text-3xl md:text-4xl font-bold mt-3 mb-4">
             Por que elegir SGO
           </h2>
-          <p className="text-white/90 max-w-2xl mx-auto text-lg">
+          <p className="text-white max-w-2xl mx-auto text-lg">
             Respaldo, trazabilidad y control en cada etapa de tus contratos.
           </p>
         </div>
@@ -85,7 +85,7 @@ export default function Benefits() {
                     </div>
                     <h3 className="text-lg font-bold text-white">{b.title}</h3>
                   </div>
-                  <p className="text-white/90 text-sm leading-relaxed">{b.desc}</p>
+                  <p className="text-white text-sm leading-relaxed">{b.desc}</p>
                 </div>
               </div>
             ))}
