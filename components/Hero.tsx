@@ -79,7 +79,7 @@ export default function Hero() {
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage:
-              "url('/images/magnific__create-a-composition-with-a-construction-worker-lo__8675.png')",
+              "url('/images/magnific__create-a-composition-with-a-team-of-construction-w__52336.png')",
             opacity: 0.4,
           }}
         />

@@ -31,7 +31,7 @@ export default function FinalCTA() {
           className="absolute inset-0 bg-cover bg-center opacity-10"
           style={{
             backgroundImage:
-              "url('/images/magnific_create-a-composicion-usin_2963158518.png')",
+              "url('/images/magnific__crea-una-composicin-con-un-ingeniero-con-casco-bla__52329.png')",
           }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-navy via-navy/95 to-navy" />
