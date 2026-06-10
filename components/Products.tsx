@@ -42,9 +42,9 @@ const products = [
 
 const colorMap: Record<string, { bg: string; text: string; border: string; glow: string }> = {
   amber: {
-    bg: "bg-blue-500/10",
-    text: "text-blue-400",
-    border: "border-blue-500/20",
+    bg: "bg-teal-500/10",
+    text: "text-teal-400",
+    border: "border-teal-500/20",
     glow: "rgba(249, 115, 22, 0.04)",
   },
   "cyan-blue": {
@@ -54,9 +54,9 @@ const colorMap: Record<string, { bg: string; text: string; border: string; glow:
     glow: "rgba(56, 189, 248, 0.04)",
   },
   "amber-light": {
-    bg: "bg-blue-500-light/10",
-    text: "text-blue-400-light",
-    border: "border-blue-500-light/20",
+    bg: "bg-teal-500-light/10",
+    text: "text-teal-400-light",
+    border: "border-teal-500-light/20",
     glow: "rgba(251, 191, 36, 0.04)",
   },
 };
@@ -81,12 +81,12 @@ export default function Products() {
   return (
     <section id="productos" ref={ref} className="py-16 md:py-20 bg-navy-light relative overflow-hidden">
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-blue-500/3 rounded-full blur-[120px]" />
+        <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-teal-500/3 rounded-full blur-[120px]" />
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
-          <span className="text-blue-400 text-sm font-semibold uppercase tracking-wider">
+          <span className="text-teal-400 text-sm font-semibold uppercase tracking-wider">
             Plataforma
           </span>
           <h2 className="text-3xl md:text-4xl font-bold mt-3 mb-4">
@@ -97,8 +97,8 @@ export default function Products() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
-          {products.map((p, i) => {
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-6">
+          {products.slice(0, 3).map((p, i) => {
             const c = colorMap[p.color];
             return (
               <div
@@ -123,6 +123,40 @@ export default function Products() {
                       viewBox="0 0 24 24"
                       strokeWidth={1.5}
                     >
+                      <path strokeLinecap="round" strokeLinejoin="round" d={p.icon} />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-bold text-off-white">{p.name}</h3>
+                    <span className={`inline-block text-xs font-semibold ${c.text} ${c.bg} ${c.border} border rounded-full px-3 py-0.5 mt-1`}>
+                      {p.tag}
+                    </span>
+                  </div>
+                </div>
+                <p className="text-slate text-sm leading-relaxed">{p.desc}</p>
+              </div>
+            );
+          })}
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+          {products.slice(3).map((p, i) => {
+            const c = colorMap[p.color];
+            return (
+              <div
+                key={p.name}
+                className={`glass-card glass-card-hover rounded-2xl p-7 transition-all duration-700 relative overflow-hidden ${
+                  visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+                }`}
+                style={{ transitionDelay: `${(i + 3) * 150}ms` }}
+              >
+                <div
+                  className="absolute -top-10 -right-10 w-32 h-32 rounded-full blur-3xl pointer-events-none"
+                  style={{ background: c.glow }}
+                />
+                <div className="flex items-start gap-4 mb-4">
+                  <div className={`flex-shrink-0 w-12 h-12 ${c.bg} rounded-xl flex items-center justify-center`}>
+                    <svg className={`w-6 h-6 ${c.text}`} fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
                       <path strokeLinecap="round" strokeLinejoin="round" d={p.icon} />
                     </svg>
                   </div>

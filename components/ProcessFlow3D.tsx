@@ -46,7 +46,7 @@ export default function ProcessFlow3D() {
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-12">
-          <span className="text-blue-400 text-sm font-semibold uppercase tracking-wider">Beneficios</span>
+          <span className="text-teal-400 text-sm font-semibold uppercase tracking-wider">Beneficios</span>
           <h2 className="text-3xl md:text-4xl font-bold mt-3 mb-4">Por que elegir SGO</h2>
           <p className="text-slate max-w-2xl mx-auto">Respaldo, trazabilidad y control en cada etapa de tus contratos.</p>
         </div>
@@ -61,9 +61,9 @@ export default function ProcessFlow3D() {
               style={{ transitionDelay: `${i * 150}ms` }}
             >
               <div className="flex items-start gap-4">
-                <div className="flex-shrink-0 w-12 h-12 bg-blue-500/10 rounded-xl flex items-center justify-center">
+                <div className="flex-shrink-0 w-12 h-12 bg-teal-500/10 rounded-xl flex items-center justify-center">
                   <svg
-                    className="w-6 h-6 text-blue-400"
+                    className="w-6 h-6 text-teal-400"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"

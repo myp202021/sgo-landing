@@ -22,17 +22,17 @@ export default function Footer() {
           {/* Links */}
           <div className="flex flex-wrap items-center gap-6 text-xs text-white/50">
             <span>Sucre 2680, Nunoa, Santiago</span>
-            <a href="mailto:contacto@sgo.cl" className="hover:text-blue-300 transition-colors">
+            <a href="mailto:contacto@sgo.cl" className="hover:text-teal-300 transition-colors">
               contacto@sgo.cl
             </a>
-            <a href="tel:+56226848887" className="hover:text-blue-300 transition-colors">
+            <a href="tel:+56226848887" className="hover:text-teal-300 transition-colors">
               +56 2 268 48 887
             </a>
             <a
               href="https://beta.sgo.cl"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-blue-300 transition-colors"
+              className="hover:text-teal-300 transition-colors"
             >
               beta.sgo.cl
             </a>
@@ -43,7 +43,7 @@ export default function Footer() {
           Desarrollado por{" "}
           <a
             href="https://www.mulleryperez.cl"
-            className="text-white/40 hover:text-blue-300/40 transition-colors"
+            className="text-white/40 hover:text-teal-300/40 transition-colors"
           >
             Muller y Perez
           </a>

@@ -38,7 +38,7 @@ export default function UserProfiles() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
-          <span className="text-blue-400 text-sm font-semibold uppercase tracking-wider">
+          <span className="text-teal-400 text-sm font-semibold uppercase tracking-wider">
             Perfiles
           </span>
           <h2 className="text-3xl md:text-4xl font-bold mt-3 mb-4">
@@ -58,9 +58,9 @@ export default function UserProfiles() {
               }`}
               style={{ transitionDelay: `${i * 100}ms` }}
             >
-              <div className="w-12 h-12 bg-blue-500/10 rounded-xl flex items-center justify-center mx-auto mb-4">
+              <div className="w-12 h-12 bg-teal-500/10 rounded-xl flex items-center justify-center mx-auto mb-4">
                 <svg
-                  className="w-6 h-6 text-blue-400"
+                  className="w-6 h-6 text-teal-400"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"

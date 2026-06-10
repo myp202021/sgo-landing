@@ -38,7 +38,7 @@ export default function FinalCTA() {
       </div>
 
       {/* Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-blue-500/5 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-teal-500/5 rounded-full blur-[120px] pointer-events-none" />
 
       <div
         className={`max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center transition-all duration-1000 ${
@@ -47,7 +47,7 @@ export default function FinalCTA() {
       >
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
           Protege hoy la gestion{" "}
-          <span className="text-blue-400">
+          <span className="text-teal-400">
             de tus contratos.
           </span>
         </h2>
@@ -67,9 +67,10 @@ export default function FinalCTA() {
           </a>
           <a
             href="tel:+56226848887"
-            className="w-full sm:w-auto border border-white/20 hover:border-blue-500/40 text-white font-medium text-xl px-14 py-5 rounded-full transition-all hover:bg-white/5"
+            className="w-full sm:w-auto border border-white/20 hover:border-teal-500/40 text-white font-medium text-xl px-14 py-5 rounded-full transition-all hover:bg-white/5"
           >
-            Llamar al +56 2 268 48 887
+            <svg className="w-5 h-5 mr-2 inline" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
+            +56 2 268 48 887
           </a>
         </div>
 
@@ -90,7 +91,7 @@ export default function FinalCTA() {
             <div className="text-slate/50 uppercase text-xs tracking-wider mb-1 font-semibold">
               Correo
             </div>
-            <a href="mailto:contacto@sgo.cl" className="text-blue-400 hover:text-blue-300-light transition-colors">
+            <a href="mailto:contacto@sgo.cl" className="text-teal-400 hover:text-teal-300-light transition-colors">
               contacto@sgo.cl
             </a>
           </div>
