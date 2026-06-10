@@ -123,36 +123,32 @@ export default function Hero() {
               validez juridica.
             </p>
 
-            {/* Trust row */}
-            <div className="flex flex-wrap gap-x-6 gap-y-3 mb-10">
-              {[
-                "Firma electronica avanzada",
-                "Trazabilidad completa",
-                "Respaldo juridico",
-              ].map((item) => (
-                <div key={item} className="flex items-center gap-2 text-sm text-white">
-                  <svg className="w-4 h-4 text-teal flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                    <path
-                      fillRule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clipRule="evenodd"
-                    />
+            {/* Trust row with icons */}
+            <div className="flex flex-wrap gap-x-6 gap-y-4">
+              <div className="flex items-center gap-2.5 text-sm text-white">
+                <div className="w-8 h-8 rounded-lg bg-teal/15 flex items-center justify-center flex-shrink-0">
+                  <svg className="w-4 h-4 text-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" />
                   </svg>
-                  {item}
                 </div>
-              ))}
-            </div>
-
-            {/* Stats */}
-            <div className="flex gap-8">
-              {stats.map((s) => (
-                <div key={s.label}>
-                  <AnimatedNumber target={s.target} prefix={s.prefix} suffix={s.suffix} />
-                  <p className="text-white/70 text-xs font-medium mt-1 uppercase tracking-wider">
-                    {s.label}
-                  </p>
+                Firma electronica avanzada
+              </div>
+              <div className="flex items-center gap-2.5 text-sm text-white">
+                <div className="w-8 h-8 rounded-lg bg-teal/15 flex items-center justify-center flex-shrink-0">
+                  <svg className="w-4 h-4 text-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
                 </div>
-              ))}
+                Trazabilidad completa
+              </div>
+              <div className="flex items-center gap-2.5 text-sm text-white">
+                <div className="w-8 h-8 rounded-lg bg-teal/15 flex items-center justify-center flex-shrink-0">
+                  <svg className="w-4 h-4 text-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+                  </svg>
+                </div>
+                Respaldo juridico
+              </div>
             </div>
           </div>
 
@@ -255,6 +251,18 @@ export default function Hero() {
               <p className="text-[10px] text-white/20 mt-4 text-center">
                 Tus datos estan protegidos. No compartimos informacion con terceros.
               </p>
+            </div>
+
+            {/* Stats below form */}
+            <div className="grid grid-cols-3 gap-4 mt-6">
+              {stats.map((s) => (
+                <div key={s.label} className="text-center py-4 rounded-xl" style={{ background: "rgba(32,48,56,0.5)", border: "1px solid rgba(255,255,255,0.06)" }}>
+                  <AnimatedNumber target={s.target} prefix={s.prefix} suffix={s.suffix} />
+                  <p className="text-white/70 text-[10px] font-semibold mt-1 uppercase tracking-wider">
+                    {s.label}
+                  </p>
+                </div>
+              ))}
             </div>
           </div>
         </div>
