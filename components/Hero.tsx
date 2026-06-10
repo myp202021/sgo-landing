@@ -77,7 +77,7 @@ export default function Hero() {
           src="/images/magnific__create-a-composition-with-a-team-of-construction-w__52336.png"
           alt=""
           fill
-          className="object-cover opacity-20"
+          className="object-cover opacity-35"
           priority
         />
         <div
@@ -117,7 +117,7 @@ export default function Hero() {
               </span>
             </h1>
 
-            <p className="text-lg text-white/85 leading-relaxed mb-8 max-w-xl">
+            <p className="text-lg text-white leading-relaxed mb-8 max-w-xl">
               Evita perdidas de informacion, reduce riesgos legales y manten
               todas las comunicaciones respaldadas con plena trazabilidad y
               validez juridica.
@@ -130,7 +130,7 @@ export default function Hero() {
                 "Trazabilidad completa",
                 "Respaldo juridico",
               ].map((item) => (
-                <div key={item} className="flex items-center gap-2 text-sm text-white/70">
+                <div key={item} className="flex items-center gap-2 text-sm text-white/90">
                   <svg className="w-4 h-4 text-teal flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path
                       fillRule="evenodd"
@@ -167,7 +167,7 @@ export default function Hero() {
               <div className="absolute -top-20 -right-20 w-40 h-40 bg-teal/8 rounded-full blur-3xl pointer-events-none" />
 
               <h2 className="text-xl font-bold text-white mb-1">Solicita una demo</h2>
-              <p className="text-sm text-white/60 mb-6">
+              <p className="text-sm text-white/80 mb-6">
                 Un especialista te contactara en menos de 24 horas.
               </p>
 

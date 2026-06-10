@@ -59,7 +59,7 @@ export default function PainPoints() {
               fill
               className="object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-navy/60 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-r from-navy/30 to-transparent" />
           </div>
 
           {/* Right: Content */}

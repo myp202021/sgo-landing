@@ -65,7 +65,7 @@ export default function UserProfiles() {
           fill
           className="object-cover"
         />
-        <div className="absolute inset-0" style={{ background: "linear-gradient(180deg, rgba(26,40,48,0.7) 0%, rgba(32,48,56,0.85) 100%)" }} />
+        <div className="absolute inset-0" style={{ background: "linear-gradient(180deg, rgba(26,40,48,0.4) 0%, rgba(32,48,56,0.7) 100%)" }} />
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="text-center px-5">
             <span className="text-teal text-sm font-semibold uppercase tracking-wider">
@@ -74,7 +74,7 @@ export default function UserProfiles() {
             <h2 className="text-3xl md:text-4xl font-bold mt-3 mb-4 text-white">
               Quienes deberian usar SGO?
             </h2>
-            <p className="text-white/80 max-w-xl mx-auto">
+            <p className="text-white max-w-xl mx-auto">
               Cualquier organizacion que necesite respaldar formalmente sus comunicaciones y proteger sus contratos.
             </p>
           </div>

@@ -88,7 +88,7 @@ export default function SocialProof() {
               <svg className="w-4 h-4 text-teal flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
                 <path strokeLinecap="round" strokeLinejoin="round" d={b.icon} />
               </svg>
-              <span className="text-white/90 text-sm font-medium">{b.label}</span>
+              <span className="text-white text-sm font-medium">{b.label}</span>
             </div>
           ))}
         </div>

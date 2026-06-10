@@ -57,7 +57,7 @@ export default function Benefits() {
           <h2 className="text-3xl md:text-4xl font-bold mt-3 mb-4">
             Por que elegir SGO
           </h2>
-          <p className="text-white/70 max-w-2xl mx-auto text-lg">
+          <p className="text-white/90 max-w-2xl mx-auto text-lg">
             Respaldo, trazabilidad y control en cada etapa de tus contratos.
           </p>
         </div>
@@ -85,7 +85,7 @@ export default function Benefits() {
                     </div>
                     <h3 className="text-lg font-bold text-white">{b.title}</h3>
                   </div>
-                  <p className="text-white/70 text-sm leading-relaxed">{b.desc}</p>
+                  <p className="text-white/90 text-sm leading-relaxed">{b.desc}</p>
                 </div>
               </div>
             ))}
@@ -103,7 +103,7 @@ export default function Benefits() {
               fill
               className="object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-navy-deep/80 via-transparent to-navy-deep/30" />
+            <div className="absolute inset-0 bg-gradient-to-t from-navy-deep/70 via-transparent to-transparent" />
             {/* Overlay badge */}
             <div className="absolute bottom-6 left-6 right-6 p-5 rounded-xl" style={{ background: "rgba(26,40,48,0.85)", backdropFilter: "blur(12px)", border: "1px solid rgba(48,152,168,0.15)" }}>
               <p className="text-white font-bold text-base mb-1">+400 proyectos protegidos</p>

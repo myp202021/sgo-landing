@@ -61,7 +61,7 @@ export default function Testimonials() {
           src="/images/magnific__create-a-composition-with-two-miners-with-their-ba__52328.png"
           alt=""
           fill
-          className="object-cover opacity-[0.03]"
+          className="object-cover opacity-[0.10]"
         />
       </div>
 
@@ -75,7 +75,7 @@ export default function Testimonials() {
           <h2 className="text-3xl md:text-4xl font-bold mt-3 mb-4">
             Lo que dicen nuestros clientes
           </h2>
-          <p className="text-white/70 max-w-xl mx-auto">
+          <p className="text-white/90 max-w-xl mx-auto">
             Empresas que ya digitalizaron la gestion de sus obras con SGO.
           </p>
         </div>
@@ -101,7 +101,7 @@ export default function Testimonials() {
                   </svg>
                 ))}
               </div>
-              <p className="text-white/90 text-[15px] leading-relaxed mb-6">
+              <p className="text-white text-[15px] leading-relaxed mb-6">
                 &ldquo;{t.text}&rdquo;
               </p>
               <div className="flex items-center gap-3 pt-4 border-t border-white/5">
@@ -138,7 +138,7 @@ export default function Testimonials() {
                   </svg>
                 ))}
               </div>
-              <p className="text-white/90 text-[15px] leading-relaxed mb-6">
+              <p className="text-white text-[15px] leading-relaxed mb-6">
                 &ldquo;{t.text}&rdquo;
               </p>
               <div className="flex items-center gap-3 pt-4 border-t border-white/5">

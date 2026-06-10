@@ -32,7 +32,7 @@ export default function FinalCTA() {
           src="/images/magnific__create-a-composition-with-a-miner-boss-with-white-__52334.png"
           alt=""
           fill
-          className="object-cover opacity-[0.06]"
+          className="object-cover opacity-[0.15]"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-navy-deep via-navy-deep/95 to-navy-deep" />
       </div>
@@ -49,7 +49,7 @@ export default function FinalCTA() {
           Protege hoy la gestion{" "}
           <span className="text-teal">de tus contratos.</span>
         </h2>
-        <p className="text-white/80 text-lg max-w-xl mx-auto mb-10 leading-relaxed">
+        <p className="text-white text-lg max-w-xl mx-auto mb-10 leading-relaxed">
           Implementa una plataforma que fortalece la trazabilidad, reduce
           riesgos y entrega respaldo juridico a cada comunicacion.
         </p>
