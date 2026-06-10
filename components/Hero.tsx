@@ -56,10 +56,9 @@ function AnimatedNumber({
 }
 
 const stats = [
-  { target: 700, prefix: "+", suffix: "", label: "Obras Conectadas" },
+  { target: 400, prefix: "+", suffix: "", label: "Proyectos Conectados" },
   { target: 100, prefix: "", suffix: "%", label: "Normativa MOP" },
   { target: 24, prefix: "", suffix: "/7", label: "Disponibilidad" },
-  { target: 3, prefix: "", suffix: "", label: "Perfiles de Usuario" },
 ];
 
 export default function Hero() {
@@ -107,22 +106,22 @@ export default function Hero() {
               />
             </svg>
             <span className="text-blue-400 text-sm font-medium tracking-wide">
-              +700 obras conectadas en Chile
+              +400 proyectos conectados
             </span>
           </div>
 
           {/* H1 */}
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] mb-7 tracking-tight">
-            El Libro de Obras Digital que el MOP exige.{" "}
+            Blinda la gestion de tus contratos{" "}
             <span className="text-blue-400">
-              Y que tu equipo necesita.
+              desde el primer dia.
             </span>
           </h1>
 
           {/* Subtitle */}
           <p className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto mb-12 leading-relaxed">
-            SGO digitaliza la comunicacion contractual entre constructoras, consultoras
-            e inspeccion fiscal. Trazabilidad completa. Firma electronica. Cumplimiento normativo.
+            Evita perdidas de informacion, reduce riesgos legales y manten todas las comunicaciones
+            respaldadas en una plataforma digital con plena trazabilidad y validez juridica.
           </p>
 
           {/* CTAs */}
@@ -144,7 +143,7 @@ export default function Hero() {
           </div>
 
           {/* Stats row */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 max-w-4xl mx-auto">
+          <div className="grid grid-cols-3 gap-6 md:gap-8 max-w-3xl mx-auto">
             {stats.map((s) => (
               <div key={s.label} className="text-center glass-card rounded-2xl py-5 px-4">
                 <AnimatedNumber target={s.target} prefix={s.prefix} suffix={s.suffix} />

@@ -6,8 +6,8 @@ import ProcessFlow3D from "../components/ProcessFlow3D";
 import UserProfiles from "../components/UserProfiles";
 import SocialProof from "../components/SocialProof";
 import Testimonials from "../components/Testimonials";
-import BlogPreview from "../components/BlogPreview";
-import FAQ from "../components/FAQ";
+// import BlogPreview from "../components/BlogPreview";
+// import FAQ from "../components/FAQ";
 import FinalCTA from "../components/FinalCTA";
 import Footer from "../components/Footer";
 
@@ -158,8 +158,8 @@ export default function SGOPage() {
       <UserProfiles />
       <SocialProof />
       <Testimonials />
-      <BlogPreview />
-      <FAQ />
+      {/* <BlogPreview /> */}
+      {/* <FAQ /> */}
       <FinalCTA />
       <Footer />
     </>

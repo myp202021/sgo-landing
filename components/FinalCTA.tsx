@@ -46,14 +46,14 @@ export default function FinalCTA() {
         }`}
       >
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-          Digitaliza tu{" "}
+          Protege hoy la gestion{" "}
           <span className="text-blue-400">
-            próxima obra
+            de tus contratos.
           </span>
         </h2>
         <p className="text-white/70 text-lg max-w-xl mx-auto mb-10 leading-relaxed">
-          Mas de 700 obras ya confian en SGO. Solicita una demostracion y descubre como
-          cumplir con la normativa MOP de forma simple y eficiente.
+          Implementa una plataforma que fortalece la trazabilidad, reduce riesgos
+          y entrega respaldo juridico a cada comunicacion.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-14">
@@ -61,13 +61,13 @@ export default function FinalCTA() {
             href="https://beta.sgo.cl"
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full sm:w-auto cta-glow text-white font-bold text-lg px-10 py-4 rounded-full"
+            className="w-full sm:w-auto cta-glow text-white font-bold text-xl px-14 py-5 rounded-full"
           >
             Solicitar Demo
           </a>
           <a
             href="tel:+56226848887"
-            className="w-full sm:w-auto border border-white/20 hover:border-blue-500/40 text-white font-medium text-lg px-10 py-4 rounded-full transition-all hover:bg-white/5"
+            className="w-full sm:w-auto border border-white/20 hover:border-blue-500/40 text-white font-medium text-xl px-14 py-5 rounded-full transition-all hover:bg-white/5"
           >
             Llamar al +56 2 268 48 887
           </a>
