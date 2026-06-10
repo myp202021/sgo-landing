@@ -8,15 +8,12 @@ export default function Footer() {
           {/* Logo */}
           <div className="flex items-center gap-2.5">
             <Image
-              src="/images/sgo-icon.png"
-              alt="SGO"
-              width={28}
-              height={28}
-              className="rounded brightness-0 invert"
+              src="/images/sgo-logo-blanco.png"
+              alt="SGO.CL — Sistema Gestión de Obras"
+              width={140}
+              height={35}
+              className="h-8 w-auto"
             />
-            <span className="font-bold text-white/80 text-sm">
-              SGO — Sistema de Gestion de Obras
-            </span>
           </div>
 
           {/* Links */}
