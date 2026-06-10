@@ -3,14 +3,30 @@
 import { useEffect, useRef, useState } from "react";
 
 const profiles = [
-  "Empresas constructoras",
-  "Inmobiliarias",
-  "Mandantes privados",
-  "Empresas de ingenieria",
-  "Consultoras",
-  "Operadores de infraestructura",
-  "Concesionarias",
-  "Equipos legales",
+  {
+    name: "Constructoras",
+    icon: "M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3H21m-3.75 3H21",
+  },
+  {
+    name: "Inmobiliarias",
+    icon: "M8.25 21v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21m0 0h4.5V3.545M12.75 21h7.5V10.75M2.25 21h1.5m18 0h-18M2.25 9l4.5-1.636M18.75 3l-1.5.545m0 6.205l3 1m1.5.5l-1.5-.5M6.75 7.364V3h-3v18m3-13.636l10.5-3.819",
+  },
+  {
+    name: "Mandantes privados",
+    icon: "M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 00.75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 00-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0112 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 01-.673-.38m0 0A2.18 2.18 0 013 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 013.413-.387m7.5 0V5.25A2.25 2.25 0 0013.5 3h-3a2.25 2.25 0 00-2.25 2.25v.894m7.5 0a48.667 48.667 0 00-7.5 0M12 12.75h.008v.008H12v-.008z",
+  },
+  {
+    name: "Ingenieria",
+    icon: "M11.42 15.17l-5.1-5.1m0 0L3 12.61m3.32-2.54l1.41-1.41a2 2 0 012.83 0l5.1 5.1a2 2 0 010 2.83l-1.41 1.41m-3.54-3.54l5.1 5.1m0 0L21 17.39m-3.32 2.54l-1.41 1.41a2 2 0 01-2.83 0l-5.1-5.1a2 2 0 010-2.83l1.41-1.41",
+  },
+  {
+    name: "Consultoras",
+    icon: "M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5",
+  },
+  {
+    name: "Concesionarias",
+    icon: "M9 6.75V15m0-8.25a1.5 1.5 0 010 3m0-3a1.5 1.5 0 000 3m0 0v6m3-8.25a1.5 1.5 0 010 3m0-3a1.5 1.5 0 000 3m0 3V15m0 0a1.5 1.5 0 010 3m0-3a1.5 1.5 0 000 3m0 0V18m3-10.5a1.5 1.5 0 010 3m0-3a1.5 1.5 0 000 3m0 0v3.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z",
+  },
 ];
 
 export default function UserProfiles() {
@@ -31,55 +47,44 @@ export default function UserProfiles() {
   }, []);
 
   return (
-    <section id="perfiles" ref={ref} className="py-16 md:py-20 bg-navy-light relative overflow-hidden">
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-0 right-1/4 w-[400px] h-[400px] bg-cyan-blue/3 rounded-full blur-[120px]" />
-      </div>
-
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center mb-16">
-          <span className="text-teal-400 text-sm font-semibold uppercase tracking-wider">
-            Perfiles
+    <section ref={ref} className="section-navy py-20 md:py-24 relative overflow-hidden">
+      <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 relative z-10">
+        <div className="text-center mb-12">
+          <span className="text-teal text-sm font-semibold uppercase tracking-wider">
+            Para quienes
           </span>
           <h2 className="text-3xl md:text-4xl font-bold mt-3 mb-4">
-            Quienes deberian usar SGO?
+            Organizaciones que confian en SGO
           </h2>
-          <p className="text-slate max-w-2xl mx-auto">
-            Cualquier organizacion que necesite respaldar formalmente sus comunicaciones y proteger sus contratos.
-          </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-5 max-w-5xl mx-auto">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4 max-w-5xl mx-auto">
           {profiles.map((p, i) => (
             <div
-              key={p}
-              className={`glass-card glass-card-hover rounded-2xl p-6 text-center transition-all duration-700 ${
-                visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+              key={p.name}
+              className={`group text-center py-6 px-3 rounded-xl transition-all duration-500 hover:bg-white/[0.03] ${
+                visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
               }`}
-              style={{ transitionDelay: `${i * 100}ms` }}
+              style={{ transitionDelay: `${i * 80}ms` }}
             >
-              <div className="w-12 h-12 bg-teal-500/10 rounded-xl flex items-center justify-center mx-auto mb-4">
+              <div className="w-12 h-12 mx-auto mb-3 rounded-xl bg-teal/8 group-hover:bg-teal/15 flex items-center justify-center transition-colors">
                 <svg
-                  className="w-6 h-6 text-teal-400"
+                  className="w-5 h-5 text-teal/70 group-hover:text-teal transition-colors"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
                   strokeWidth={1.5}
                 >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3H21m-3.75 3H21"
-                  />
+                  <path strokeLinecap="round" strokeLinejoin="round" d={p.icon} />
                 </svg>
               </div>
-              <h3 className="text-sm font-bold text-off-white">{p}</h3>
+              <p className="text-off-white text-xs font-semibold">{p.name}</p>
             </div>
           ))}
         </div>
       </div>
 
-      <div className="section-divider max-w-4xl mx-auto mt-20" />
+      <div className="section-divider max-w-4xl mx-auto mt-16" />
     </section>
   );
 }
