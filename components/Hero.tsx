@@ -57,9 +57,9 @@ function AnimatedNumber({
 }
 
 const stats = [
-  { target: 400, prefix: "+", suffix: "", label: "Proyectos" },
-  { target: 100, prefix: "", suffix: "%", label: "Normativa MOP" },
-  { target: 24, prefix: "", suffix: "/7", label: "Disponible" },
+  { target: 400, prefix: "+", suffix: "", label: "Proyectos conectados" },
+  { target: 24, prefix: "", suffix: "/7", label: "Disponibilidad" },
+  { target: 3, prefix: "", suffix: "", label: "Perfiles de usuario" },
 ];
 
 export default function Hero() {

@@ -99,6 +99,10 @@ export default function PainPoints() {
                 </div>
               ))}
             </div>
+
+            <p className="text-white/90 text-base mt-8 leading-relaxed font-medium">
+              Cada comunicacion mal gestionada puede transformarse en un riesgo para tu organizacion.
+            </p>
           </div>
         </div>
       </div>
