@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 
 const profiles = [
   {
@@ -55,44 +56,65 @@ export default function UserProfiles() {
   }, []);
 
   return (
-    <section ref={ref} className="section-navy py-20 md:py-24 relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center mb-12">
-          <span className="text-teal text-sm font-semibold uppercase tracking-wider">
-            Para quienes
-          </span>
-          <h2 className="text-3xl md:text-4xl font-bold mt-3 mb-4">
-            Organizaciones que confian en SGO
-          </h2>
-        </div>
-
-        <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-4 gap-4 max-w-5xl mx-auto">
-          {profiles.map((p, i) => (
-            <div
-              key={p.name}
-              className={`group text-center py-6 px-3 rounded-xl transition-all duration-500 hover:bg-white/[0.03] ${
-                visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
-              }`}
-              style={{ transitionDelay: `${i * 80}ms` }}
-            >
-              <div className="w-12 h-12 mx-auto mb-3 rounded-xl bg-teal/8 group-hover:bg-teal/15 flex items-center justify-center transition-colors">
-                <svg
-                  className="w-5 h-5 text-teal/70 group-hover:text-teal transition-colors"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  strokeWidth={1.5}
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" d={p.icon} />
-                </svg>
-              </div>
-              <p className="text-off-white text-xs font-semibold">{p.name}</p>
-            </div>
-          ))}
+    <section ref={ref} className="relative overflow-hidden">
+      {/* Full-width image band */}
+      <div className="relative h-[300px] md:h-[350px]">
+        <Image
+          src="/images/magnific_a-diverse-group-of-engine_Piq5SHb42C.png"
+          alt="Equipo diverso de profesionales de construccion"
+          fill
+          className="object-cover"
+        />
+        <div className="absolute inset-0" style={{ background: "linear-gradient(180deg, rgba(26,40,48,0.7) 0%, rgba(32,48,56,0.85) 100%)" }} />
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className="text-center px-5">
+            <span className="text-teal text-sm font-semibold uppercase tracking-wider">
+              Para quienes
+            </span>
+            <h2 className="text-3xl md:text-4xl font-bold mt-3 mb-4 text-white">
+              Quienes deberian usar SGO?
+            </h2>
+            <p className="text-white/80 max-w-xl mx-auto">
+              Cualquier organizacion que necesite respaldar formalmente sus comunicaciones y proteger sus contratos.
+            </p>
+          </div>
         </div>
       </div>
 
-      <div className="section-divider max-w-4xl mx-auto mt-16" />
+      {/* Profiles grid overlapping the image */}
+      <div className="section-navy py-12 md:py-16">
+        <div className="max-w-5xl mx-auto px-5 sm:px-6 lg:px-8 -mt-20 md:-mt-16 relative z-10">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+            {profiles.map((p, i) => (
+              <div
+                key={p.name}
+                className={`group text-center py-6 px-4 rounded-xl transition-all duration-500 ${
+                  visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
+                }`}
+                style={{
+                  transitionDelay: `${i * 80}ms`,
+                  background: "rgba(32, 48, 56, 0.8)",
+                  border: "1px solid rgba(255,255,255,0.06)",
+                  backdropFilter: "blur(8px)",
+                }}
+              >
+                <div className="w-12 h-12 mx-auto mb-3 rounded-xl bg-teal/10 group-hover:bg-teal/20 flex items-center justify-center transition-colors">
+                  <svg
+                    className="w-5 h-5 text-teal/80 group-hover:text-teal transition-colors"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    strokeWidth={1.5}
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" d={p.icon} />
+                  </svg>
+                </div>
+                <p className="text-white text-xs font-semibold">{p.name}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
     </section>
   );
 }

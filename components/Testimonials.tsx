@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 
 const testimonials = [
   {
@@ -54,6 +55,16 @@ export default function Testimonials() {
 
   return (
     <section id="testimonios" ref={ref} className="section-dark py-20 md:py-28 relative overflow-hidden">
+      {/* Background image */}
+      <div className="absolute inset-0 pointer-events-none">
+        <Image
+          src="/images/magnific__create-a-composition-with-two-miners-with-their-ba__52328.png"
+          alt=""
+          fill
+          className="object-cover opacity-[0.03]"
+        />
+      </div>
+
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-teal/3 rounded-full blur-[150px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 relative z-10">
@@ -79,11 +90,10 @@ export default function Testimonials() {
               }`}
               style={{
                 transitionDelay: `${i * 150}ms`,
-                background: "rgba(32, 48, 56, 0.4)",
+                background: "rgba(32, 48, 56, 0.5)",
                 border: "1px solid rgba(255,255,255,0.06)",
               }}
             >
-              {/* Stars */}
               <div className="flex gap-1 mb-4">
                 {[...Array(5)].map((_, j) => (
                   <svg key={j} className="w-4 h-4 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
@@ -91,18 +101,16 @@ export default function Testimonials() {
                   </svg>
                 ))}
               </div>
-
-              <p className="text-off-white/90 text-[15px] leading-relaxed mb-6">
+              <p className="text-white/90 text-[15px] leading-relaxed mb-6">
                 &ldquo;{t.text}&rdquo;
               </p>
-
               <div className="flex items-center gap-3 pt-4 border-t border-white/5">
                 <div className="w-10 h-10 bg-teal/12 rounded-full flex items-center justify-center text-teal text-sm font-bold">
                   {t.initials}
                 </div>
                 <div>
-                  <div className="font-bold text-off-white text-sm">{t.name}</div>
-                  <div className="text-steel text-xs">{t.company}</div>
+                  <div className="font-bold text-white text-sm">{t.name}</div>
+                  <div className="text-teal text-xs">{t.company}</div>
                 </div>
               </div>
             </div>
@@ -119,7 +127,7 @@ export default function Testimonials() {
               }`}
               style={{
                 transitionDelay: `${(i + 3) * 150}ms`,
-                background: "rgba(32, 48, 56, 0.4)",
+                background: "rgba(32, 48, 56, 0.5)",
                 border: "1px solid rgba(255,255,255,0.06)",
               }}
             >
@@ -130,18 +138,16 @@ export default function Testimonials() {
                   </svg>
                 ))}
               </div>
-
-              <p className="text-off-white/90 text-[15px] leading-relaxed mb-6">
+              <p className="text-white/90 text-[15px] leading-relaxed mb-6">
                 &ldquo;{t.text}&rdquo;
               </p>
-
               <div className="flex items-center gap-3 pt-4 border-t border-white/5">
                 <div className="w-10 h-10 bg-teal/12 rounded-full flex items-center justify-center text-teal text-sm font-bold">
                   {t.initials}
                 </div>
                 <div>
-                  <div className="font-bold text-off-white text-sm">{t.name}</div>
-                  <div className="text-steel text-xs">{t.company}</div>
+                  <div className="font-bold text-white text-sm">{t.name}</div>
+                  <div className="text-teal text-xs">{t.company}</div>
                 </div>
               </div>
             </div>

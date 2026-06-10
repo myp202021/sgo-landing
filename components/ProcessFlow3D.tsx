@@ -7,7 +7,7 @@ const benefits = [
   {
     number: "01",
     title: "Blindaje juridico",
-    desc: "Todas las comunicaciones con respaldo verificable y firma electronica avanzada.",
+    desc: "Todas las comunicaciones cuentan con respaldo y evidencia verificable.",
     icon: "M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z",
   },
   {
@@ -49,16 +49,6 @@ export default function Benefits() {
 
   return (
     <section id="beneficios" ref={ref} className="section-dark py-20 md:py-28 relative overflow-hidden">
-      {/* Background image strip */}
-      <div className="absolute inset-0 pointer-events-none">
-        <Image
-          src="/images/magnific__create-a-composition-with-a-construction-worker-on__11815.png"
-          alt=""
-          fill
-          className="object-cover opacity-[0.04]"
-        />
-      </div>
-
       <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
           <span className="text-teal text-sm font-semibold uppercase tracking-wider">
@@ -72,42 +62,54 @@ export default function Benefits() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
-          {benefits.map((b, i) => (
-            <div
-              key={b.title}
-              className={`group relative rounded-2xl p-8 transition-all duration-500 overflow-hidden ${
-                visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-              }`}
-              style={{
-                transitionDelay: `${i * 120}ms`,
-                background: "rgba(32, 48, 56, 0.4)",
-                border: "1px solid rgba(255,255,255,0.06)",
-              }}
-            >
-              {/* Hover glow */}
-              <div className="absolute -top-10 -right-10 w-32 h-32 bg-teal/0 group-hover:bg-teal/8 rounded-full blur-3xl transition-all duration-500 pointer-events-none" />
-
-              <div className="flex items-start gap-5 relative z-10">
-                <div className="flex-shrink-0">
-                  <span className="text-teal/30 text-3xl font-extrabold leading-none">
-                    {b.number}
-                  </span>
-                </div>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center max-w-6xl mx-auto">
+          {/* Left: Benefits cards */}
+          <div className="space-y-5">
+            {benefits.map((b, i) => (
+              <div
+                key={b.title}
+                className={`group flex items-start gap-5 p-5 rounded-xl transition-all duration-500 hover:bg-white/[0.03] ${
+                  visible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-6"
+                }`}
+                style={{ transitionDelay: `${i * 120}ms` }}
+              >
+                <span className="text-teal/25 text-4xl font-extrabold leading-none mt-1 select-none">
+                  {b.number}
+                </span>
                 <div>
-                  <div className="flex items-center gap-3 mb-2">
-                    <div className="w-9 h-9 rounded-lg bg-teal/10 flex items-center justify-center">
-                      <svg className="w-4.5 h-4.5 text-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
+                  <div className="flex items-center gap-3 mb-1.5">
+                    <div className="w-8 h-8 rounded-lg bg-teal/10 flex items-center justify-center">
+                      <svg className="w-4 h-4 text-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
                         <path strokeLinecap="round" strokeLinejoin="round" d={b.icon} />
                       </svg>
                     </div>
-                    <h3 className="text-lg font-bold text-off-white">{b.title}</h3>
+                    <h3 className="text-lg font-bold text-white">{b.title}</h3>
                   </div>
-                  <p className="text-steel text-sm leading-relaxed">{b.desc}</p>
+                  <p className="text-white/70 text-sm leading-relaxed">{b.desc}</p>
                 </div>
               </div>
+            ))}
+          </div>
+
+          {/* Right: Image */}
+          <div
+            className={`relative rounded-2xl overflow-hidden aspect-[3/4] transition-all duration-700 ${
+              visible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-8"
+            }`}
+          >
+            <Image
+              src="/images/magnific__recreate-img1-but-change-the-helmet-for-a-white-on__52335.png"
+              alt="Ingeniero con casco blanco revisando documentacion digital"
+              fill
+              className="object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-navy-deep/80 via-transparent to-navy-deep/30" />
+            {/* Overlay badge */}
+            <div className="absolute bottom-6 left-6 right-6 p-5 rounded-xl" style={{ background: "rgba(26,40,48,0.85)", backdropFilter: "blur(12px)", border: "1px solid rgba(48,152,168,0.15)" }}>
+              <p className="text-white font-bold text-base mb-1">+400 proyectos protegidos</p>
+              <p className="text-white/60 text-sm">Constructoras, consultoras e IFO confian en SGO.</p>
             </div>
-          ))}
+          </div>
         </div>
       </div>
     </section>
