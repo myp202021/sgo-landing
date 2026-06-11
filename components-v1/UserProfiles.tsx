@@ -1,36 +1,42 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 
 const profiles = [
   {
+    name: "Empresas constructoras",
     icon: "M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3H21m-3.75 3H21",
-    title: "Empresas Constructoras",
-    desc: "Control de obra, registro diario de anotaciones, respuesta a observaciones de la inspeccion fiscal. Cumple con la normativa MOP sin papeles.",
-    features: ["Libro de Obras Digital", "Registro diario", "Respuesta a observaciones", "Firma electronica"],
-    color: "amber",
   },
   {
-    icon: "M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5m.75-9l3-3 2.148 2.148A12.061 12.061 0 0116.5 7.605",
-    title: "Consultoras",
-    desc: "Inspeccion fiscal, seguimiento de avance, comunicaciones formales al mandante. Acceso en tiempo real al libro de consultoria y documentos de obra.",
-    features: ["Libro de Consultoria", "Comunicaciones LCE", "Seguimiento de avance", "Reportes"],
-    color: "cyan-blue",
+    name: "Inmobiliarias",
+    icon: "M8.25 21v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21m0 0h4.5V3.545M12.75 21h7.5V10.75M2.25 21h1.5m18 0h-18M2.25 9l4.5-1.636M18.75 3l-1.5.545m0 6.205l3 1m1.5.5l-1.5-.5M6.75 7.364V3h-3v18m3-13.636l10.5-3.819",
   },
   {
-    icon: "M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0012 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75z",
-    title: "Inspeccion Fiscal (IFO)",
-    desc: "Supervision, aprobaciones y resoluciones. Visibilidad total de anotaciones, plazos, documentos y comunicaciones formales en un solo lugar.",
-    features: ["Supervision en tiempo real", "Aprobaciones", "Resoluciones", "Auditoria completa"],
-    color: "amber-light",
+    name: "Mandantes privados",
+    icon: "M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 00.75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 00-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0112 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 01-.673-.38m0 0A2.18 2.18 0 013 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 013.413-.387m7.5 0V5.25A2.25 2.25 0 0013.5 3h-3a2.25 2.25 0 00-2.25 2.25v.894m7.5 0a48.667 48.667 0 00-7.5 0M12 12.75h.008v.008H12v-.008z",
+  },
+  {
+    name: "Empresas de ingenieria",
+    icon: "M11.42 15.17l-5.1-5.1m0 0L3 12.61m3.32-2.54l1.41-1.41a2 2 0 012.83 0l5.1 5.1a2 2 0 010 2.83l-1.41 1.41m-3.54-3.54l5.1 5.1m0 0L21 17.39m-3.32 2.54l-1.41 1.41a2 2 0 01-2.83 0l-5.1-5.1a2 2 0 010-2.83l1.41-1.41",
+  },
+  {
+    name: "Consultoras",
+    icon: "M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5",
+  },
+  {
+    name: "Operadores de infraestructura",
+    icon: "M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418",
+  },
+  {
+    name: "Concesionarias",
+    icon: "M9 6.75V15m0-8.25a1.5 1.5 0 010 3m0-3a1.5 1.5 0 000 3m0 0v6m3-8.25a1.5 1.5 0 010 3m0-3a1.5 1.5 0 000 3m0 3V15m0 0a1.5 1.5 0 010 3m0-3a1.5 1.5 0 000 3m0 0V18m3-10.5a1.5 1.5 0 010 3m0-3a1.5 1.5 0 000 3m0 0v3.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z",
+  },
+  {
+    name: "Equipos legales",
+    icon: "M12 3v17.25m0 0c-1.472 0-2.882.265-4.185.75M12 20.25c1.472 0 2.882.265 4.185.75M18.75 4.97A48.416 48.416 0 0012 4.5c-2.291 0-4.545.16-6.75.47m13.5 0c1.01.143 2.01.317 3 .52m-3-.52l2.62 10.726c.122.499-.106 1.028-.589 1.202a5.988 5.988 0 01-2.031.352 5.988 5.988 0 01-2.031-.352c-.483-.174-.711-.703-.59-1.202L18.75 4.971zm-16.5.52c.99-.203 1.99-.377 3-.52m0 0l2.62 10.726c.122.499-.106 1.028-.589 1.202a5.989 5.989 0 01-2.031.352 5.989 5.989 0 01-2.031-.352c-.483-.174-.711-.703-.59-1.202L5.25 4.971z",
   },
 ];
-
-const colorClasses: Record<string, { bg: string; text: string; border: string; dot: string }> = {
-  amber: { bg: "bg-blue-500/10", text: "text-blue-400", border: "border-blue-500/20", dot: "bg-blue-500" },
-  "cyan-blue": { bg: "bg-cyan-blue/10", text: "text-cyan-blue", border: "border-cyan-blue/20", dot: "bg-cyan-blue" },
-  "amber-light": { bg: "bg-blue-500-light/10", text: "text-blue-400-light", border: "border-blue-500-light/20", dot: "bg-blue-500-light" },
-};
 
 export default function UserProfiles() {
   const ref = useRef<HTMLElement>(null);
@@ -50,38 +56,51 @@ export default function UserProfiles() {
   }, []);
 
   return (
-    <section id="perfiles" ref={ref} className="py-16 md:py-20 bg-navy-light relative overflow-hidden">
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-0 right-1/4 w-[400px] h-[400px] bg-cyan-blue/3 rounded-full blur-[120px]" />
+    <section ref={ref} className="relative overflow-hidden">
+      {/* Full-width image band */}
+      <div className="relative h-[300px] md:h-[350px]">
+        <Image
+          src="/images/magnific_a-diverse-group-of-engine_Piq5SHb42C.png"
+          alt="Equipo diverso de profesionales de construccion"
+          fill
+          className="object-cover"
+        />
+        <div className="absolute inset-0" style={{ background: "linear-gradient(180deg, rgba(26,40,48,0.4) 0%, rgba(32,48,56,0.7) 100%)" }} />
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className="text-center px-5">
+            <span className="text-teal text-sm font-semibold uppercase tracking-wider">
+              Para quienes
+            </span>
+            <h2 className="text-3xl md:text-4xl font-bold mt-3 mb-4 text-white">
+              Quienes deberian usar SGO?
+            </h2>
+            <p className="text-white max-w-xl mx-auto">
+              Cualquier organizacion que necesite respaldar formalmente sus comunicaciones y proteger sus contratos.
+            </p>
+          </div>
+        </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center mb-16">
-          <span className="text-blue-400 text-sm font-semibold uppercase tracking-wider">
-            Perfiles
-          </span>
-          <h2 className="text-3xl md:text-4xl font-bold mt-3 mb-4">
-            Tres actores, una plataforma
-          </h2>
-          <p className="text-slate max-w-2xl mx-auto">
-            Cada perfil tiene su vista y permisos especificos. Todos conectados en tiempo real.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-          {profiles.map((p, i) => {
-            const c = colorClasses[p.color];
-            return (
+      {/* Profiles grid overlapping the image */}
+      <div className="section-navy py-12 md:py-16">
+        <div className="max-w-5xl mx-auto px-5 sm:px-6 lg:px-8 -mt-20 md:-mt-16 relative z-10">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+            {profiles.map((p, i) => (
               <div
-                key={p.title}
-                className={`glass-card glass-card-hover rounded-2xl p-7 text-center transition-all duration-700 ${
-                  visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+                key={p.name}
+                className={`group text-center py-6 px-4 rounded-xl transition-all duration-500 ${
+                  visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
                 }`}
-                style={{ transitionDelay: `${i * 150}ms` }}
+                style={{
+                  transitionDelay: `${i * 80}ms`,
+                  background: "rgba(32, 48, 56, 0.8)",
+                  border: "1px solid rgba(255,255,255,0.06)",
+                  backdropFilter: "blur(8px)",
+                }}
               >
-                <div className={`w-16 h-16 ${c.bg} rounded-2xl flex items-center justify-center mx-auto mb-5`}>
+                <div className="w-12 h-12 mx-auto mb-3 rounded-xl bg-teal/10 group-hover:bg-teal/20 flex items-center justify-center transition-colors">
                   <svg
-                    className={`w-8 h-8 ${c.text}`}
+                    className="w-5 h-5 text-teal/80 group-hover:text-teal transition-colors"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -90,23 +109,12 @@ export default function UserProfiles() {
                     <path strokeLinecap="round" strokeLinejoin="round" d={p.icon} />
                   </svg>
                 </div>
-                <h3 className={`text-xl font-bold mb-3 ${c.text}`}>{p.title}</h3>
-                <p className="text-slate text-sm leading-relaxed mb-5">{p.desc}</p>
-                <div className="space-y-2">
-                  {p.features.map((f) => (
-                    <div key={f} className="flex items-center gap-2 text-sm text-off-white/80">
-                      <div className={`w-1.5 h-1.5 rounded-full ${c.dot} flex-shrink-0`} />
-                      {f}
-                    </div>
-                  ))}
-                </div>
+                <p className="text-white text-xs font-semibold">{p.name}</p>
               </div>
-            );
-          })}
+            ))}
+          </div>
         </div>
       </div>
-
-      <div className="section-divider max-w-4xl mx-auto mt-20" />
     </section>
   );
 }
