@@ -33,15 +33,13 @@ export default function Navbar() {
           {/* Logo */}
           <a href="#" className="flex items-center gap-2.5">
             <Image
-              src="/images/sgo-icon.png"
-              alt="SGO"
-              width={36}
-              height={36}
-              className="rounded-lg brightness-0 invert"
+              src="/images/sgo-logo-blanco.png"
+              alt="SGO.CL"
+              width={140}
+              height={35}
+              className="h-8 w-auto"
+              priority
             />
-            <span className="text-xl font-bold tracking-wide text-white">
-              SGO<span className="text-blue-400">.CL</span>
-            </span>
           </a>
 
           {/* Desktop links */}
