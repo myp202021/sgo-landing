@@ -84,6 +84,10 @@ export default function PainPoints() {
             <PainCard key={i} icon={p.icon} text={p.text} delay={i * 120} />
           ))}
         </div>
+
+        <p className="text-center text-white text-base mt-10 max-w-3xl mx-auto leading-relaxed">
+          Cada comunicacion mal gestionada puede transformarse en un riesgo para tu organizacion.
+        </p>
       </div>
 
       <div className="section-divider max-w-4xl mx-auto mt-20" />
