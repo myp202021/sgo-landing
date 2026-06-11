@@ -33,6 +33,12 @@ export default function Footer() {
             >
               beta.sgo.cl
             </a>
+            <a
+              href="/v1/politica-de-privacidad"
+              className="hover:text-blue-300 transition-colors"
+            >
+              Política de Privacidad
+            </a>
           </div>
         </div>
 
