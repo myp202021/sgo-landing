@@ -75,7 +75,7 @@ export default function UserProfiles() {
               Quienes deberian usar SGO?
             </h2>
             <p className="text-white max-w-xl mx-auto">
-              Cualquier organizacion que necesite respaldar formalmente sus comunicaciones y proteger sus contratos.
+              Cualquier organización que necesite respaldar formalmente sus comunicaciones y proteger sus contratos.
             </p>
           </div>
         </div>

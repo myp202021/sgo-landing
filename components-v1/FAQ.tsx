@@ -5,7 +5,7 @@ import { useState } from "react";
 const faqs = [
   {
     q: "Es obligatorio el Libro de Obras Digital en Chile?",
-    a: "Si. El Ministerio de Obras Publicas (MOP) de Chile exige el uso del Libro de Obras Digital para las empresas constructoras que ejecutan obras publicas. SGO cumple con todos los requisitos normativos establecidos, incluyendo firma electronica avanzada, marcas de tiempo y trazabilidad completa.",
+    a: "Si. El Ministerio de Obras Publicas (MOP) de Chile exige el uso del Libro de Obras Digital para las empresas constructoras que ejecutan obras publicas. SGO cumple con todos los requisitos normativos establecidos, incluyendo firma electrónica avanzada, marcas de tiempo y trazabilidad completa.",
   },
   {
     q: "Que perfiles pueden usar SGO?",
@@ -13,7 +13,7 @@ const faqs = [
   },
   {
     q: "SGO tiene firma electronica?",
-    a: "Si. SGO utiliza firma electronica avanzada que cumple con la Ley 19.799 de Chile. Cada anotacion, comunicacion y documento queda firmado digitalmente con validez legal equivalente a la firma manuscrita.",
+    a: "Si. SGO utiliza firma electrónica avanzada que cumple con la Ley 19.799 de Chile. Cada anotación, comunicación y documento queda firmado digitalmente con validez legal equivalente a la firma manuscrita.",
   },
   {
     q: "Se puede usar desde terreno?",
@@ -21,11 +21,11 @@ const faqs = [
   },
   {
     q: "Cuanto toma implementar SGO en una obra?",
-    a: "La implementacion es rapida: se configura la obra en la plataforma, se asignan los roles (constructora, consultora, IFO) y cada usuario accede desde su navegador. El equipo de soporte de SGO acompana todo el proceso. En la mayoria de los casos, la obra queda operativa en menos de una semana.",
+    a: "La implementacion es rapida: se configura la obra en la plataforma, se asignan los roles (constructora, consultora, IFO) y cada usuario accede desde su navegador. El equipo de soporte de SGO acompaña todo el proceso. En la mayoria de los casos, la obra queda operativa en menos de una semana.",
   },
   {
     q: "Como se garantiza la trazabilidad?",
-    a: "Cada accion en SGO genera un registro inmutable con fecha, hora, autor y contenido. Las marcas de tiempo son inalterables y el sistema mantiene un historial completo de todas las modificaciones. Es equivalente a un sistema de cadena de bloques aplicado a la gestion de obras.",
+    a: "Cada accion en SGO genera un registro inmutable con fecha, hora, autor y contenido. Las marcas de tiempo son inalterables y el sistema mantiene un historial completo de todas las modificaciones. Es equivalente a un sistema de cadena de bloques aplicado a la gestión de obras.",
   },
 ];
 

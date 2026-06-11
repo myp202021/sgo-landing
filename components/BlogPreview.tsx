@@ -57,7 +57,7 @@ export default function BlogPreview() {
             Noticias y Guias para la Construccion
           </h2>
           <p className="text-slate max-w-2xl mx-auto">
-            Informacion actualizada sobre normativa MOP, gestion de obras y digitalizacion.
+            Información actualizada sobre normativa MOP, gestión de obras y digitalizacion.
           </p>
         </div>
 

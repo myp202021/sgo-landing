@@ -111,16 +111,16 @@ export default function Hero() {
             </div>
 
             <h1 className="text-4xl md:text-5xl lg:text-[54px] font-extrabold leading-[1.08] mb-6 tracking-tight">
-              Blinda la gestion de tus contratos{" "}
+              Blinda la gestión de tus contratos{" "}
               <span className="text-teal">
-                desde el primer dia.
+                desde el primer día.
               </span>
             </h1>
 
             <p className="text-lg text-white leading-relaxed mb-8 max-w-xl">
-              Evita perdidas de informacion, reduce riesgos legales y manten
+              Evita pérdidas de información, reduce riesgos legales y manten
               todas las comunicaciones respaldadas con plena trazabilidad y
-              validez juridica.
+              validez jurídica.
             </p>
 
             {/* Trust row with icons */}
@@ -131,7 +131,7 @@ export default function Hero() {
                     <path strokeLinecap="round" strokeLinejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" />
                   </svg>
                 </div>
-                Firma electronica avanzada
+                Firma electrónica avanzada
               </div>
               <div className="flex items-center gap-2.5 text-sm text-white">
                 <div className="w-8 h-8 rounded-lg bg-teal/15 flex items-center justify-center flex-shrink-0">
@@ -249,7 +249,7 @@ export default function Hero() {
               </form>
 
               <p className="text-[10px] text-white/20 mt-4 text-center">
-                Tus datos estan protegidos. No compartimos informacion con terceros.
+                Tus datos estan protegidos. No compartimos información con terceros.
               </p>
             </div>
 

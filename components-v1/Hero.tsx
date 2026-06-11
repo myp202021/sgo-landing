@@ -112,16 +112,16 @@ export default function Hero() {
 
           {/* H1 */}
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] mb-7 tracking-tight">
-            Blinda la gestion de tus contratos{" "}
+            Blinda la gestión de tus contratos{" "}
             <span className="text-blue-400">
-              desde el primer dia.
+              desde el primer día.
             </span>
           </h1>
 
           {/* Subtitle */}
           <p className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto mb-12 leading-relaxed">
-            Evita perdidas de informacion, reduce riesgos legales y manten todas las comunicaciones
-            respaldadas en una plataforma digital con plena trazabilidad y validez juridica.
+            Evita pérdidas de información, reduce riesgos legales y manten todas las comunicaciones
+            respaldadas en una plataforma digital con plena trazabilidad y validez jurídica.
           </p>
 
           {/* CTAs */}

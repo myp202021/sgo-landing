@@ -7,7 +7,7 @@ const testimonials = [
   {
     name: "Bruno Gysling",
     company: "MASERCO",
-    text: "La plataforma acompana de cerca con un equipo humano super comprometido y diligente.",
+    text: "La plataforma acompaña de cerca con un equipo humano super comprometido y diligente.",
     initials: "BG",
   },
   {
@@ -19,7 +19,7 @@ const testimonials = [
   {
     name: "Esteban Rocha",
     company: "Inversiones Petrohue",
-    text: "Tanto la plataforma como el equipo de SGO han contribuido en los ultimos anos a lograr los objetivos establecidos en nuestros contratos.",
+    text: "Tanto la plataforma como el equipo de SGO han contribuido en los últimos años a lograr los objetivos establecidos en nuestros contratos.",
     initials: "ER",
   },
   {
@@ -76,7 +76,7 @@ export default function Testimonials() {
             Lo que dicen nuestros clientes
           </h2>
           <p className="text-white max-w-xl mx-auto">
-            Empresas que ya digitalizaron la gestion de sus obras con SGO.
+            Empresas que ya digitalizaron la gestión de sus obras con SGO.
           </p>
         </div>
 
